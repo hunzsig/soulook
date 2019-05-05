@@ -4,10 +4,9 @@
 
 import React from 'react';
 import {Icon} from 'antd';
-import Layout from './layout/Layout';
 import NotFound from './pages/NotFound';
 import routerBook from './routerBook';
-console.log(routerBook);
+
 const routerConfig = [
   /**
    * 路由
@@ -28,14 +27,12 @@ const routerConfig = [
     path: '/',
     name: '首页',
     icon: <Icon type="book"/>,
-    layout: Layout,
     component: () => import('./pages/Home/Index'),
   },
   {
     path: '/index',
     name: '首页',
     icon: <Icon type="book"/>,
-    layout: Layout,
     component: () => import('./pages/Home/Index'),
     children: routerBook,
   },

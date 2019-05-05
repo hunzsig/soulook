@@ -3,6 +3,8 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/idea.css';
 
 class IndexLight extends Component {
+
+
   constructor(props) {
     super(props);
     this.book = props.book;
@@ -18,7 +20,9 @@ class IndexLight extends Component {
 
   render() {
     return (
-      <div dangerouslySetInnerHTML={{__html: this.book}} />
+      <div>
+        <div dangerouslySetInnerHTML={{__html: this.book}} />
+      </div>
     );
   }
 }

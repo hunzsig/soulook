@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-.ant-menu-inline-collapsed{
-  width: 0!important;
+.ant-menu-inline-collapsed {
+  width: 0 !important;
 }
 
-.ant-col{
+.ant-col {
   height: 100%;
 }
 
@@ -17,7 +17,7 @@
     .menu {
       height: 100%;
       overflow-x: hidden;
-      overflow-y: scroll;
+      overflow-y: auto;
     }
 
     .conContainer {
@@ -29,7 +29,7 @@
       .con {
         width: 100%;
         margin: 0;
-        padding: 12px 5% 0 5%;
+        padding: 12px 7% 0 7%;
         flex: 1;
         overflow-y: auto;
       }
@@ -61,9 +61,37 @@
       .menu-btns {
         margin: 8px 0 0 16px;
       }
+
+      .page-trans {
+        .anticon {
+          position: absolute;
+          z-index: 999;
+          top: 40vh;
+          width: 100px;
+          height: 100px;
+          line-height: 110px;
+          font-size: 50px;
+          opacity: 0.1;
+          color: #444444;
+        }
+        .anticon.anticon-left{
+          left: 2%;
+        }
+        .anticon.anticon-right{
+          right: 2%;
+        }
+        .anticon.disabled{
+          display: none;
+        }
+        .anticon.enabled:hover{
+          background: #f0f2f5;
+          opacity: 0.8;
+        }
+      }
     }
   }
 }
+
 .h-layout.light {
   background: #ffffff !important;
 }
@@ -88,14 +116,15 @@
   }
   .menu-btns {
     z-index: 999;
-    width: 90%!important;
-    margin: 10px 5%!important;
-    button{
+    width: 90% !important;
+    margin: 10px 5% !important;
+
+    button {
       width: 33.2%;
     }
   }
   .footer {
-    padding: 2px 0!important;
-    font-size: 10px!important;
+    padding: 2px 0 !important;
+    font-size: 10px !important;
   }
 }

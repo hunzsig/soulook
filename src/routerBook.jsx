@@ -3,7 +3,6 @@
 // 变量名 routeAsync routerConfig 为检测关键字，请不要修改名称
 
 import SUMMARY from './book/SUMMARY.md';
-import Layout from './layout/Layout';
 import React from "react";
 
 const dom = document.createElement('div');
@@ -23,13 +22,12 @@ const getDom = (d, result = [], inc = 1) => {
         getDom(childNodes[i], result, inc * 36);
         break;
       case 'A':
-        let href = childNodes[i].getAttribute('href')
+        let href = childNodes[i].getAttribute('href');
         href = href.replace('.md', '');
         href = href.replace('/', '|');
         result.push({
           path: `/${href}`,
           name: childNodes[i].innerText,
-          layout: Layout,
           component: () => import('./pages/Home/Index'),
           children: [],
         });
