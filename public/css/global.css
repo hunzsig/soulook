@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.vertical-center-modal {
+  top: 15%;
+}
+
+.hideFooter .ant-modal-body {
+  padding: 30px 30px 0 !important;
+}
+
+.hideFooter .ant-modal-confirm-content,.hideFooter .ant-confirm-content{
+  margin-left: 0 !important;
+}
+
+.hideFooter .ant-modal-confirm-btns,.hideFooter .ant-confirm-btns{
+  display: none !important;
+}

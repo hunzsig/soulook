@@ -1,0 +1,69 @@
+{
+  "name": "soulook",
+  "version": "0.0.1",
+  "description": "魂书，一个精美的git写书项目",
+  "author": "hunzsig",
+  "homepage": "https://www.hunzsig.org",
+  "dependencies": {
+    "antd": "latest",
+    "classnames": "^2.2.5",
+    "enquire-js": "^0.1.2",
+    "foundation-symbol": "^0.1.3",
+    "highlight.js": "^9.15.6",
+    "prop-types": "^15.5.8",
+    "react-color": "^2.14.1",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-document-title": "^2.0.3",
+    "react-highlight": "^0.12.0",
+    "react-loadable": "^5.4.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-plugin-import": "^1.7.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "h-ice-cli": "latest",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "scripts": {
+    "start": "ice dev -p 10001",
+    "build": "ice build",
+    "app": "ice app",
+    "lint": "eslint . --ext '.js,.jsx' --fix"
+  },
+  "buildConfig": {
+    "hot": false,
+    "dropConsole": true,
+    "primaryTheme": {
+      "primary-color": "#3080fc"
+    },
+    "appHtml": {
+      "dev": "dev.html",
+      "prod": "index.html",
+      "app": "app.html"
+    },
+    "publicUrl": {
+      "dev": "/",
+      "prod": "/",
+      "app": "./"
+    },
+    "entry": {
+      "dev": "src/index.js",
+      "prod": "src/index.js",
+      "app": "src/app.js"
+    },
+    "import": [
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  },
+  "copyConfig": {
+    "include": [],
+    "except": []
+  },
+  "title": "魂书 - soulook - "
+}

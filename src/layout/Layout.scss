@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+.ant-menu-inline-collapsed{
+  width: 0!important;
+}
+
+.ant-col{
+  height: 100%;
+}
+
+.h-layout {
+  height: 100vh;
+
+  .row {
+    height: 100%;
+
+    .menu {
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    .conContainer {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .con {
+        width: 100%;
+        margin: 0;
+        padding: 12px 5% 0 5%;
+        flex: 1;
+        overflow-y: auto;
+      }
+
+      .footer {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+
+        .copyright {
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 3px 0;
+          text-align: center;
+
+          span, a {
+            margin-right: 10px;
+          }
+        }
+
+        .line {
+          margin: 6px 0;
+          border-bottom: 1px solid rgba(120, 130, 140, .13);
+        }
+      }
+
+      .menu-btns {
+        margin: 8px 0 0 16px;
+      }
+    }
+  }
+}
+.h-layout.light {
+  background: #ffffff !important;
+}
+
+.h-layout.dark {
+  background: #272727 !important;
+}
+
+.h-layout.small {
+  font-size: 14px !important;
+}
+
+.h-layout.big {
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    position: fixed;
+    top: 50px;
+    z-index: 99;
+  }
+  .menu-btns {
+    z-index: 999;
+    width: 90%!important;
+    margin: 10px 5%!important;
+    button{
+      width: 33.2%;
+    }
+  }
+  .footer {
+    padding: 2px 0!important;
+    font-size: 10px!important;
+  }
+}
