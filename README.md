@@ -17,6 +17,11 @@ npm i
 cnpm i
 ```
 
+#### 将您书籍的md文件，全部复制到src/book里
+```
+需要一个 SUMMARY.md 文件用于目录构建
+```
+
 #### 使用nodejs服务器进行本地测试，默认占用 10001端口
 ```
 npm start

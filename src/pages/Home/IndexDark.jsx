@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/darkula.css';
+import './StyleDark.scss';
 
 class IndexDark extends Component {
   constructor(props) {
