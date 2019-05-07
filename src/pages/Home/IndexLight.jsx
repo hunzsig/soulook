@@ -4,8 +4,6 @@ import 'highlight.js/styles/idea.css';
 import './StyleLight.scss';
 
 class IndexLight extends Component {
-
-
   constructor(props) {
     super(props);
     this.book = props.book;
@@ -21,9 +19,7 @@ class IndexLight extends Component {
 
   render() {
     return (
-      <div>
-        <div dangerouslySetInnerHTML={{__html: this.book}} />
-      </div>
+      <div dangerouslySetInnerHTML={{__html: this.book}}/>
     );
   }
 }

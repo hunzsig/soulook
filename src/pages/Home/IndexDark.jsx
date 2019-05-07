@@ -19,7 +19,7 @@ class IndexDark extends Component {
 
   render() {
     return (
-      <div dangerouslySetInnerHTML={{__html: this.book}} />
+      <div dangerouslySetInnerHTML={{__html: this.book}}/>
     );
   }
 }

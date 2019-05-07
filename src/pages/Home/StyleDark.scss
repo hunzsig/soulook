@@ -3,12 +3,13 @@
 $color-shine: #ffffff;
 $color-main: #f0f2f5;
 $color-sub: #272727;
+$color-blockquote: #2b2b2b;
 $color-href: #ffe045;
 $color-h-href: #ff191a;
-$color-li: #f0f2f5;
 $color-hr: #555555;
 $color-p: #dddddd;
 $color-p-font: #dcdee1;
+$color-li: #f0f2f5;
 
 .con {
   * {
@@ -58,6 +59,14 @@ $color-p-font: #dcdee1;
   h6 {
     padding-top: 3px;
     padding-bottom: 3px;
+  }
+
+  div > p {
+    padding: 20px;
+  }
+  blockquote > p {
+    padding: 13px 5px;
+    background: $color-blockquote;
   }
 
   p {
