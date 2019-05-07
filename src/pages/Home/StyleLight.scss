@@ -4,10 +4,11 @@ $color-shine: #457dfc;
 $color-main: #699ffc;
 $color-sub: #f0f2f5;
 $color-href: #457dfc;
-$color-h-href: #ff911b;
+$color-h-href: #000000;
 $color-hr: #e8e8e8;
 $color-p: #dddddd;
 $color-p-font: #272727;
+$color-li: #444444;
 
 
 .con {
@@ -60,6 +61,14 @@ $color-p-font: #272727;
     padding-bottom: 3px;
   }
 
+  div > p {
+    padding: 20px;
+  }
+  blockquote > p {
+    padding: 13px 5px;
+    background: $color-sub;
+  }
+
   p {
     padding: 0;
     color: $color-p-font;
@@ -91,6 +100,7 @@ $color-p-font: #272727;
       -webkit-transition: .12s;
       transition: .12s;
       cursor: default;
+      color: $color-li;
     }
 
     li::before {

@@ -5,9 +5,10 @@ $color-main: #f0f2f5;
 $color-sub: #272727;
 $color-href: #ffe045;
 $color-h-href: #ff191a;
+$color-li: #f0f2f5;
 $color-hr: #555555;
 $color-p: #dddddd;
-$color-p-font: #f0f2f5;
+$color-p-font: #dcdee1;
 
 .con {
   * {
@@ -90,6 +91,7 @@ $color-p-font: #f0f2f5;
       -webkit-transition: .12s;
       transition: .12s;
       cursor: default;
+      color: $color-li;
     }
 
     li::before {

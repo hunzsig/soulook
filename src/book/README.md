@@ -79,25 +79,25 @@ call TriggerAddAction( gg_trg_[YOUR_TRIGGER], function Trig_[YOUR_TRIGGER]_Actio
 endfunction
 ```
 
-### 这些默认的function都是没有用的，将他们全部删除，留下一个[空白的文本区]
-### 在文本区顶部 *include* h-vjass的根目录文件h-vjass.j,注意相对路径要正确，以你的【YDWE.exe】相对的目录为准
-##### （不建议路径存在有中文）
-### 如果此时你已经完成上述步骤，那么文本区内现在应该是这样的：
+#### 这些默认的function都是没有用的，将他们全部删除，留下一个[空白的文本区]
+#### 在文本区顶部 *include* h-vjass的根目录文件h-vjass.j,注意相对路径要正确，以你的【YDWE.exe】相对的目录为准
+> （不建议路径存在有中文）
+#### 如果此时你已经完成上述步骤，那么文本区内现在应该是这样的：
 ```
 include "[relatively_path]/h-vjass/h-vjass.j"
 ```
 
 
-# 保存地图查看是否出错，如果没有出错则v-vjass库添加成功
+### 保存地图查看是否出错，如果没有出错则v-vjass库添加成功
 
-以上仅为添加v-vjass，而在制作地图的实践中，你应该是建立自己的main文件来引用v-vjass（如可参考目录中的hMain.j）
+> 以上仅为添加v-vjass，而在制作地图的实践中，你应该是建立自己的main文件来引用v-vjass（如可参考目录中的hMain.j）
 那么文本区内现在应该改为这样的：
+
 ```
 include "[relatively_path]/h-vjass/hMain.j"
 ```
 
-```
-注意：
+> 注意：
 h-vjass库开源，不定时更新，可访问 https://www.hunzsig.org 查看下载最新版
 h-vjass库仅仅提供一些功能函数协助做图作者更加轻松制作地图
 h-vjass库不保证完全正确无bug，高效率，所以如有需要，请自行修改源码进行游戏制作，这里不过是给出一种方式
@@ -109,5 +109,4 @@ CommandFunc.txt -> units\CommandFunc.txt
 war3mapMisc.txt -> war3mapMisc.txt
 war3mapskin.txt -> war3mapskin.txt
 同时你必须创建系统所需要的所有技能及物品模板，详情请查看demo，由于自主过程十分繁琐，强烈建议使用demo.w3x进行二次开发
-```
 
