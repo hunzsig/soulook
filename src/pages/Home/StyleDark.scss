@@ -1,15 +1,71 @@
 @charset "UTF-8";
 
+$color-shine: #ffffff;
+$color-main: #f0f2f5;
+$color-sub: #272727;
+$color-href: #ffe045;
+$color-h-href: #ff191a;
+$color-hr: #555555;
+$color-p: #dddddd;
+$color-p-font: #f0f2f5;
+
 .con {
+  * {
+    font-family: Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, PingFang SC, Microsoft YaHei;
+  }
+
+  a {
+    color: $color-href !important;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    padding: 8px 0 8px 16px;
-    background: #f0f2f5;
-    color: #272727 !important;
+    padding-left: 20px;
+    background: $color-main;
+    color: $color-sub !important;
     border-radius: 3px;
 
     a {
-      color: #ff191a !important;;
+      color: $color-h-href !important;
     }
+  }
+
+  h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  h3 {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  h4 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  h5 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  h6 {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  p {
+    padding: 0;
+    color: $color-p-font;
+  }
+
+  code {
+    padding: 10px;
   }
 
   hr {
@@ -20,7 +76,7 @@
     height: 1px;
     margin: 24px 0;
     border: 0;
-    background: #555555;
+    background: $color-hr;
   }
 
   ul {
@@ -39,8 +95,7 @@
     li::before {
       position: absolute;
       content: '\2022';
-      color: #f0f2f5;
-      top: 0;
+      color: $color-main;
       left: 0;
       text-align: center;
       font-size: 2em;
@@ -51,7 +106,7 @@
     }
 
     li:hover {
-      color: #ffffff;
+      color: $color-shine;
     }
 
     li:hover::before {

@@ -1,28 +1,19 @@
 @charset "UTF-8";
 
+
 h1, h2, h3, h4, h5, h6, p, pre {
   white-space: pre-wrap;
   word-break: break-all;
 }
-.light{
-  h1, h2, h3, h4, h5, h6, p, li{
-    color: #272727;
-  }
-  pre, .copyright{
+
+.light {
+  .copyright {
     color: #444444;
   }
-  a{
-    color: #ff191a;
-  }
 }
-.dark{
-  h1, h2, h3, h4, h5, h6, p, li{
-    color: #f0f2f5;
-  }
-  pre, .copyright{
+
+.dark {
+  .copyright {
     color: #eeeeee;
-  }
-  a{
-    color: #ffe045;
   }
 }

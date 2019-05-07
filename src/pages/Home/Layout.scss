@@ -66,24 +66,28 @@
         .anticon {
           position: absolute;
           z-index: 999;
-          top: 40vh;
-          width: 100px;
-          height: 100px;
-          line-height: 110px;
-          font-size: 50px;
-          opacity: 0.1;
-          color: #444444;
+          width: 10vh;
+          height: 10vh;
+          line-height: 12vh;
+          font-size: 3rem;
+          opacity: 0.3;
         }
-        .anticon.anticon-left{
-          left: 2%;
-        }
-        .anticon.anticon-right{
+
+        .anticon.anticon-left {
+          top: 60vh;
           right: 2%;
         }
-        .anticon.disabled{
+
+        .anticon.anticon-right {
+          top: 70vh;
+          right: 2%;
+        }
+
+        .anticon.disabled {
           display: none;
         }
-        .anticon.enabled:hover{
+
+        .anticon.enabled:hover {
           opacity: 0.8;
         }
       }
@@ -93,10 +97,22 @@
 
 .h-layout.light {
   background: #ffffff !important;
+
+  .page-trans {
+    .anticon {
+      color: #444444;
+    }
+  }
 }
 
 .h-layout.dark {
   background: #272727 !important;
+
+  .page-trans {
+    .anticon {
+      color: #e8e9e1;
+    }
+  }
 }
 
 .h-layout.small {
@@ -111,10 +127,10 @@
   .menu {
     position: fixed;
     top: 50px;
-    z-index: 99;
+    z-index: 9999;
   }
   .menu-btns {
-    z-index: 999;
+    z-index: 998;
     width: 90% !important;
     margin: 10px 5% !important;
 

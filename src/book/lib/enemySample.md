@@ -14,3 +14,8 @@ call henemy.setEnemyPlayer(players[10])
 call henemy.setEnemyPlayer(players[11])
 ```
 
+* **创建一个敌人的单位**
+```
+call henemy.createUnitXY('H001', 0 , 0)
+```
+

@@ -7,3 +7,8 @@ camera例子
 call hcamera.setModel("normal")
 ```
 
+* **设定镜头模式为 zoom**
+```
+call hcamera.setModel("zoom")
+```
+
