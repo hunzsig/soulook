@@ -12,3 +12,5 @@ function hBgm takes string s returns nothing
 endfunction
 #define SetMapDescription(s) hBgm(s)
 ```
+
+> 此方法在重制版魔兽中是无效的

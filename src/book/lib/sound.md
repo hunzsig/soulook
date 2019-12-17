@@ -1,6 +1,6 @@
-media
+sound
 
-> 调用：hmedia.method()
+> 调用：hsound.method()
 
 ---
 

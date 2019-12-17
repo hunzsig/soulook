@@ -1,43 +1,48 @@
 #### 目录结构如下：
 ```
-    ├── h-vjass.j - 入口文件，你的main文件需要包含它
-    ├── hSync.j - 同步方法，处理无法暂停的功能（结构体内不得暂停）
-    ├── hMain.j - 一个简单例子，在F4中include这个main文件。而main需要包含h-vjass.j
-    ├── hTest.j - 测试代码之一
-    ├── demo.w3x - *仅供参考，最好直接拿 “ 实践时空之轮TD ” 二次开发
+    ├── h-lua.lua - 入口文件，你的main文件需要包含它
+    ├── h-lua.fdf - 官方UI-fdf
+    ├── h-lua.toc - 官方UI-toc
+    ├── slk.lua - SLK物编生成数据
+    ├── slkInit.lua - SLK物编初始化
+    ├── foundation - 基础文件
+    │   ├── foundation - 基础文件
+    │   ├── blizzard_b.lua - 暴雪BJ全局
+    │   ├── blizzard_c.lua - 暴雪C全局
+    │   ├── blizzard_bj.lua - 暴雪部分BJ函数
+    │   ├── blizzard_def.lua - 实际无用，参考用途
+    │   ├── f9.lua - 框架任务
+    │   ├── runtime.lua - 运行时数据集
+    │   ├── json.lua - json库
+    │   └── start.lua - 开始准备
     └── lib
-        ├── abstract - 加载其他功能模块
-        ├── ability - 基础技能
-        ├── attrbuteIds - 基础属性用到的物编技能ID
-        ├── attrbute - 基础/拓展属性系统，攻击护甲移动暴击韧性等
-        ├── attrbuteEffect - 伤害特效属性系统
-        ├── attrbuteNatural - 自然属性系统
-        ├── attrbuteHunt - 伤害系统
-        ├── attrbuteUnit - 单位与属性系统关联模块
-        ├── award - 奖励模块，用于控制玩家的黄金木头经验
-        ├── camera - 镜头模块，用于控制玩家镜头
-        ├── console - 简单调试打印模块
-        ├── effect - 特效模块
-        ├── effectString - 一些常用不错的特效串（可以直接在effect中使用字符串而忽略这个）
-        ├── enemy - 敌人模块，用于设定敌人玩家，自动分配单位
-        ├── env - 环境模块，可随机为区域生成装饰物及地表纹理
-        ├── event - 事件模块，自定义事件，包括物品合成分拆/暴击，精确攻击捕捉等
-        ├── filter - 组过滤器，主要用于单位组条件
-        ├── group - 单位组
-        ├── hero - 英雄/选英雄模块，包含点击/酒馆选择，repick/random功能等
-        ├── is - 判断模块 * 常用
-        ├── item - 物品模块，与属性系统无缝结合，合成/分拆等功能
-        ├── itemMix - 物品合成子模块
-        ├── lightning - 闪电链
-        ├── logic - 逻辑模块
-        ├── mark - 遮罩模块
-        ├── media - 声音模块
-        ├── message - 消息/漂浮字模块
-        ├── multiboard - 多面板，包含自带的属性系统
-        ├── player - 玩家
-        ├── rect - 区域
-        ├── skill - 高级技能
-        ├── time - 时间/计时器 * 常用
-        ├── unit - 单位
-        └── weather - 天气
+        ├── ability.lua - 基础技能
+        ├── attrbute.lua - 基础/拓展/伤害特效/自然/单位关联，万能属性系统，比h-vjass的更加自由及强大
+        ├── award.lua - 奖励模块，用于控制玩家的黄金木头经验
+        ├── camera.lua - 镜头模块，用于控制玩家镜头
+        ├── dialog.lua - 对话框模块，用于显示对话框
+        ├── dzapi.lua - Dzapi
+        ├── effect.lua - 特效模块
+        ├── enemy.lua - 敌人模块，用于设定敌人玩家，自动分配单位
+        ├── env.lua - 环境模块，可随机为区域生成装饰物及地表纹理
+        ├── event.lua - 事件模块，自定义事件，包括物品合成分拆/暴击，精确攻击捕捉等
+        ├── group.lua - 单位组
+        ├── hero.lua - 英雄/选英雄模块，包含点击/酒馆选择，repick/random功能等
+        ├── is.lua - 判断模块 * 常用
+        ├── item.lua - 物品模块，与属性系统无缝结合，合成/分拆等功能
+        ├── leaderBoard.lua 排行榜模块，用于简易构建排行榜
+        ├── lightning.lua - 闪电链
+        ├── logic.lua - 逻辑模块
+        ├── mark.lua - 遮罩模块
+        ├── message.lua - 消息模块(注意漂浮字模块与hvjass不同，是一个独立的ttg模块)
+        ├── multiboard.lua - 多面板，包含自带的属性系统
+        ├── player.lua - 玩家
+        ├── rect.lua - 区域
+        ├── skill.lua - 高级技能
+        ├── sound.lua - 声音模块
+        ├── system.lua - 系统默认函数
+        ├── time.lua - 时间/计时器 * 常用
+        ├── textTag.lua - 漂浮字模块
+        ├── unit.lua - 单位
+        └── weather.lua - 天气
 ```

@@ -1,6 +1,6 @@
-ability
+dialog
 
-> 调用：hability.method()
+> 调用：hdialog.method()
 
 ---
 
