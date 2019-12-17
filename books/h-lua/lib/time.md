@@ -71,21 +71,6 @@ time
 因为删除计时器时会自动删除窗口，所以这个方法一般无需使用
 ```
 
-* **getType**
-```
-获取计时器类型
-```
-
-* **pause**
-```
-暂停计时器
-```
-
-* **resume**
-```
-重启计时器
-```
-
 * **getSetTime**
 ```
 获取计时器设置时间
@@ -99,28 +84,4 @@ time
 * **getElapsedTime**
 ```
 获取计时器已过去时间
-```
-
-* **set/get**
-```
-计时器内部get/set方法，用于计时器回调传参
-setReal / getReal
-setInteger / getInteger
-setUnit / getUnit
-setString / getString
-setBoolean / getBoolean
-setLoc / getLoc
-setGroup / getGroup
-setPlayer / getPlayer
-setItem / getItem
-setTimerDialog / getTimerDialog
-setTexttag / getTexttag
-setEffect / getEffect
-setLightning / getLightning
-setRect / getRect
-setBx / getBx
-setTrigger / getTrigger
-setMultiboard / getMultiboard
-setDestructable / getDestructable
-setForce / getForce
 ```
