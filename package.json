@@ -1,9 +1,37 @@
 {
-  "name": "soulook",
-  "version": "0.0.1",
-  "description": "魂书，一个精美的git写书项目",
   "author": "hunzsig",
-  "homepage": "https://www.hunzsig.org",
+  "buildConfig": {
+    "appHtml": {
+      "app": "app.html",
+      "dev": "dev.html",
+      "prod": "index.html"
+    },
+    "dropConsole": true,
+    "entry": {
+      "app": "src/app.js",
+      "dev": "src/index.js",
+      "prod": "src/index.js"
+    },
+    "hot": false,
+    "import": [
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ],
+    "primaryTheme": {
+      "primary-color": "#3080fc"
+    },
+    "publicUrl": {
+      "app": "./",
+      "dev": "/",
+      "prod": "/"
+    }
+  },
+  "copyConfig": {
+    "except": [],
+    "include": []
+  },
   "dependencies": {
     "antd": "latest",
     "classnames": "^2.2.5",
@@ -19,51 +47,23 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2"
   },
+  "description": "魂书，一个精美的git写书项目",
   "devDependencies": {
     "babel-eslint": "^8.0.3",
     "babel-plugin-import": "^1.7.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "h-ice-cli": "latest",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "hunzsig-javascript-cli-v12": "latest",
+    "react": "16.10.2",
+    "react-dom": "16.10.2"
   },
+  "homepage": "https://www.hunzsig.org",
+  "name": "soulook",
   "scripts": {
-    "start": "ice dev -p 10001",
-    "build": "ice build",
-    "app": "ice app",
-    "lint": "eslint . --ext '.js,.jsx' --fix"
+    "app": "cliv12 app",
+    "build": "cliv12 build",
+    "lint": "eslint . --ext '.js,.jsx' --fix",
+    "start": "cliv12 dev -p 10001"
   },
-  "buildConfig": {
-    "hot": false,
-    "dropConsole": true,
-    "primaryTheme": {
-      "primary-color": "#3080fc"
-    },
-    "appHtml": {
-      "dev": "dev.html",
-      "prod": "index.html",
-      "app": "app.html"
-    },
-    "publicUrl": {
-      "dev": "/",
-      "prod": "/",
-      "app": "./"
-    },
-    "entry": {
-      "dev": "src/index.js",
-      "prod": "src/index.js",
-      "app": "src/app.js"
-    },
-    "import": [
-      {
-        "libraryName": "antd",
-        "style": true
-      }
-    ]
-  },
-  "copyConfig": {
-    "include": [],
-    "except": []
-  },
-  "title": "魂书 - soulook - "
+  "title": "魂书 - soulook - ",
+  "version": "0.0.1"
 }

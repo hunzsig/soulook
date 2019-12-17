@@ -1,5 +1,5 @@
-import React, { Component } from '_react@16.8.6@react';
-import { Link } from '_react-router-dom@4.3.1@react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class BasicNotFound extends Component {
   render() {
