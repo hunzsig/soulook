@@ -34,6 +34,7 @@
 * [award.j 资源奖励](lib/award.md)
 * [camera.j 镜头](lib/camera.md)
 * [console.j 控制台](lib/console.md)
+* [dzapi.j DzAPI](lib/dzapi.md)
 * [effect.j 特效](lib/effect.md)
 * [enemy.j 敌军](lib/enemy.md)
 * [env.j 环境](lib/env.md)

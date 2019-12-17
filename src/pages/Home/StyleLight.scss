@@ -5,7 +5,7 @@ $color-main: #699ffc;
 $color-sub: #f0f2f5;
 $color-blockquote: #f0f2f5;
 $color-href: #457dfc;
-$color-h-href: #000000;
+$color-h-href: #ffee6a;
 $color-hr: #e8e8e8;
 $color-p: #dddddd;
 $color-p-font: #272727;
@@ -28,6 +28,8 @@ $color-li: #444444;
 
     a {
       color: $color-h-href !important;
+      font-style: oblique;
+      text-decoration: underline;
     }
   }
 
@@ -64,6 +66,7 @@ $color-li: #444444;
   div > p {
     padding: 20px;
   }
+
   blockquote > p {
     padding: 13px 5px;
     background: $color-blockquote;
