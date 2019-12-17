@@ -1,7 +1,7 @@
  * [github网址](https://github.com/hunzsig/h-vjass)
  * [最佳实践：时空之轮TD](https://github.com/hunzsig/h-war3/tree/master/w3xMaps/hyperSpaceTD)
  * author hunzsig
- * version v20190505
+ * version v1.0.0
 
 # 使用优势？
 v-vjass拥有优秀的demo，在开源的同时引导您学习的更多。

@@ -1,8 +1,16 @@
-### 更新日志 <a href="https://gitlab.com/h-w3x/h-vjass" target="_blank">Git</a>
+### 更新日志 <a href="https://gitlab.com/h-w3x/h-vjass" target="_blank">#Git</a>
 
-#### 2019/09、01
+#### 2019/12/11
+    彻底删除了Dzapi.j
+#### 2019/12/6
+    修复设定敌人共享视野时只有玩家1有效而其他人无效的bug
+    修复由于字节码问题，huntGroup增加一个数量限定（8）
+#### 2019/11/17
+    删除默认的特效字符串变量
+#### 2019/11/05
+    修复闪电链技能当只有一个单位特效不会消失的bug
+#### 2019/09/01 <a href="https://github.com/hunzsig-warcraft3/w3x-hyper-space-td" target="_blank">#时空之轮TD</a>
     删除了demo，以时空之轮TD作为最佳实例
-    <a href="https://github.com/hunzsig-warcraft3/w3x-hyper-space-td" target="_blank">时空之轮TD</a>
 #### 2019/04/27
     修改event模块的全局变量为hevent，而不再是hevt，与h-lua一致
 #### 2019/04/26
