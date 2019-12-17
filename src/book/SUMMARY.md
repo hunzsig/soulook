@@ -16,10 +16,10 @@
 * [加载BGM教程](roomMusic.md)
 
 ## 基础库
-* [foundation.lua 基础库介绍](lib/foundation.md)
-* [system.lua 基础库介绍](lib/system.md)
+* [foundation.lua 基础库介绍](foundation/foundation.md)
+* [system.lua 基础库介绍](foundation/system.md)
 
-## 功能库
+## 功能库(伪)
 
 * [attribute.lua 属性系统](lib/attribute.md)
 * [award.lua 资源奖励](lib/award.md)
