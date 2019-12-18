@@ -48,7 +48,7 @@
 * [logic.j 算法逻辑](lib/logic.md)
 * [mark.j 遮罩滤镜](lib/mark.md)
 * [media.j 声音](lib/media.md)
-* [message.j 消息体](lib/message.md)
+* [message.j 消息、漂浮字](lib/message.md)
 * [multiboard.j 多面板](lib/multiboard.md)
 * [player.j 玩家](lib/player.md)
 * [rect.j 区域](lib/rect.md)
