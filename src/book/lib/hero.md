@@ -4,102 +4,80 @@ hero
 
 ---
 
-* **setHeroPrevLevel**
+* **setPrevLevel(u, lv)**
 ```
 设置英雄之前的等级
 ```
 
-* **getHeroPrevLevel**
+* **getPrevLevel(u)**
 ```
 获取英雄之前的等级
 ```
 
-* **setBuildXY**
+* **setBuildParams(x, y, distance, per_row, allow_qty)**
 ```
-设置生成选择位置坐标XY
-```
-
-* **setBuildDistance**
-```
-设置生成选择位置的间隔距离
-```
-
-* **push**
-```
-保存单位
-1.酒馆模式下，这些单位会在buildDrunkery时自动写进酒馆
-1.双击模式下，这些单位会在buildDoubleClick时在地上排列单位
-会增加 1 英雄种类数
+设定酒馆参数
+x 位置的坐标X
+y 位置的坐标Y
+distance 位置的间隔距离
+per_row 位置上横列每行最大数量
+allow_qty 酒馆内允许多少个英雄商品
 ```
 
-* **getQty**
+* **setHeroBornParams(x, y)**
 ```
-获取游戏英雄单位种类数
-```
-
-* **setPlayerAllowQty**
-```
-设置玩家最大英雄单位数量,支持1～10
+设定英雄出生点参数
+x 位置的坐标X
+y 位置的坐标Y
 ```
 
-* **getPlayerAllowQty**
+* **setPlayerAllowQty(whichPlayer, max)**
 ```
-获取玩家最大英雄单位数量
-```
-
-* **getPlayerUnitQty**
-```
-获取玩家现有单位数量
+设置玩家最大单位数量,支持1 - 7
 ```
 
-* **itIs**
+* **getPlayerAllowQty(whichPlayer)**
 ```
-设定某个单位为英雄类别
+获取玩家最大单位数量
+```
+
+* **addPlayerUnit(whichPlayer, u, type)**
+```
+添加一个单位给玩家
+```
+
+* **removePlayerUnit(whichPlayer, u, type)**
+```
+删除一个英雄单位对玩家
+```
+
+* **setIsHero(u, bool)**
+```
+设置一个单位是否使用英雄判定(请勿重复设置)
  ！请不要乱设置[一般单位]为[英雄]，以致于力量敏捷智力等不属于一般单位的属性引起崩溃报错
  ！设定后 his.hero 方法会认为单位为英雄，同时属性系统才会认定它为英雄，从而生效
 ```
 
-* **setHeroType**
+* **getHeroType(u)**
 ```
-设置英雄的类型（力str 敏agi 智int）
-```
-
-* **getHeroTypeLabel**
-```
-获取英雄的类型名称（力str 敏agi 智int）
+获取英雄的类型（STR/AGI/INT）
 ```
 
-* **getHeroType**
+* **getHeroTypeLabel(u)**
 ```
-获取英雄的类型（力str 敏agi 智int）
-```
-
-* **setDrunkeryAllowQty**
-```
-设置每个酒馆允许的最大单位数量
- ！只允许1～11
+获取英雄的类型名称（力量/敏捷/智力）
 ```
 
-* **setDrunkeryPerRow**
+* **buildClick(during, clickQty)**
 ```
-设置每行生成酒馆最大，自动换行
-```
-
-* **setDrunkeryID**
-```
-设置生成酒馆ID
+构建选择单位给玩家（clickQty 击）
+during 选择时间
+自动获取 hslk_global.heroes ，请先设置这个table
 ```
 
-* **buildDrunkery**
+* **buildTavern(during)**
 ```
-开始建立酒馆
-同时开启random指令
-同时开启repick指令
-```
-
-* **buildDoubleClick**
-```
-开始建立单位给玩家双击
-同时开启random指令
-同时开启repick指令
+构建选择单位给玩家（商店物品）
+during 选择时间
+自动获取 hslk_global.heroesItems ，请先设置这个table
 ```

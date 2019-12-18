@@ -3,95 +3,78 @@ rect
 
 ---
 
-* **createInLoc**
+* **create(x, y, w, h, name)**
 ```
-设定中心点（X,Y）创建一个长width宽height的矩形区域
-```
-
-* **getWidth**
-```
-获取区域的宽
+创建一个设定中心（x,y）创建一个长w宽h的矩形区域
 ```
 
-* **getHeight**
+* **createInLoc(loc, w, h, name)**
 ```
-获取区域的高
-```
-
-* **getStartX**
-```
-获取区域的开始点坐标X
+创建一个设定点（loc）创建一个长w宽h的矩形区域
 ```
 
-* **getStartY**
-```
-获取区域的开始点坐标Y
-```
-
-* **getEndX**
-```
-获取区域的结束点坐标X
-```
-
-* **getEndY**
-```
-获取区域的结束点坐标Y
-```
-
-* **setName**
-```
-设置区域名称
-```
-
-* **getName**
+* **getName(whichRect)**
 ```
 获取区域名称
 ```
 
-* **del**
+* **getX(whichRect)**
+```
+设置区域中心点坐标X
+```
+
+* **getY(whichRect)**
+```
+设置区域中心点坐标Y
+```
+
+* **getWidth(whichRect)**
+```
+获取区域的宽
+```
+
+* **getHeight(whichRect)**
+```
+获取区域的高
+```
+
+* **getStartX(whichRect)**
+```
+获取区域的开始点坐标X
+```
+
+* **getStartY(whichRect)**
+```
+获取区域的开始点坐标Y
+```
+
+* **getEndX(whichRect)**
+```
+获取区域的结束点坐标X
+```
+
+* **getEndY(whichRect)**
+```
+获取区域的结束点坐标Y
+```
+
+* **del(whichRect, during)**
 ```
 删除区域
 ```
 
-* **lockByRect**
+* **lock(bean)**
 ```
 锁定所有单位在某个区域无法离开
-area 区域
-ty 类型有：[square|circle][矩形|圆形]
-during 持续时间 0 则直到调用delLockByRect
-```
-
-* **lockByLoc**
-```
-锁定所有单位在某个点附近一段距离无法离开
-area 区域
-ty 类型有：[square|circle][矩形|圆形]
-width 矩形则为长度，圆形取小的为半径
-height 矩形则为宽度，圆形取小的为半径
-during 持续时间 0 则直到调用delLockByLoc
-```
-
-* **lockByUnit**
-```
-锁定所有单位在某个单位附近一段距离无法离开
-area 区域
-ty 类型有：[square|circle][矩形|圆形]
-width 矩形则为长度，圆形取小的为半径
-height 矩形则为宽度，圆形取小的为半径
-during 持续时间 0 则直到调用delLockByLoc
-```
-
-* **delLockByRect**
-```
-删除锁定区域
-```
-
-* **delLockByLoc**
-```
-删除锁定点
-```
-
-* **delLockByUnit**
-```
-删除锁定单位
+bean = {
+   type 类型有：square|circle // 矩形(默)|圆形
+   during 持续时间 必须大于0
+   width 锁定活动范围长，大于0
+   height 锁定活动范围宽，大于0
+   whichRect 锁定区域时设置，可选
+   whichUnit 锁定某个单位时设置，可选
+   whichLoc 锁定某个点时设置，可选
+   whichX 锁定某个坐标X时设置，可选
+   whichY 锁定某个坐标Y时设置，可选
+}
 ```

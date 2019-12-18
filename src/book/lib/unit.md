@@ -3,99 +3,128 @@ unit
 
 ---
 
-* **getMaxLife**
+* **getMaxLife(u)**
 ```
 获取单位的最大生命
 ```
 
-* **getLife**
+* **getCurLife(u)**
 ```
 获取单位的当前生命
 ```
 
-* **setLife**
+* **setCurLife(u, val)**
 ```
 设置单位的当前生命
 ```
 
-* **addLife**
+* **addCurLife(u, val)**
 ```
 增加单位的当前生命
 ```
 
-* **subLife**
+* **subCurLife(u, val)**
 ```
 减少单位的当前生命
 ```
 
-* **getLifePercent**
-```
-获取单位百分比生命
-```
-
-* **setLifePercent**
-```
-设置单位百分比生命
-```
-
-* **getMaxMana**
+* **getMaxMana(u)**
 ```
 获取单位的最大魔法
 ```
 
-* **getMana**
+* **getCurMana(u)**
 ```
 获取单位的当前魔法
 ```
 
-* **setMana**
+* **setCurMana(u, val)**
 ```
 设置单位的当前魔法
 ```
 
-* **addMana**
+* **addCurMana(u, val)**
 ```
 增加单位的当前魔法
 ```
 
-* **subMana**
+* **subCurMana(u, val)**
 ```
 减少单位的当前魔法
 ```
 
-* **getManaPercent**
+* **getCurLifePercent(u)**
+```
+获取单位百分比生命
+```
+
+* **setCurLifePercent(u, val)**
+```
+设置单位百分比生命
+```
+
+* **getCurManaPercent(u)**
 ```
 获取单位百分比魔法
 ```
 
-* **setManaPercent**
+* **setCurManaPercent(u, val)**
 ```
 设置单位百分比魔法
 ```
 
-* **setPeriod**
+* **setPeriod(u, life)**
 ```
 设置单位的生命周期
 ```
 
-* **setOpenPunish**
+* **getFacing(u)**
 ```
-设置单位是否启用硬直
+获取单位面向角度
 ```
 
-* **isOpenPunish**
+* **isOpenPunish(u)**
 ```
 获取单位是否启用硬直（系统默认不启用）
 ```
 
-* **getAvatar**
+* **create(bean)**
 ```
-获取单位类型的头像
+创建单位/单位组
+bean = {
+   whichPlayer = nil, --归属玩家
+   unitId = nil, --类型id,如'H001'
+   x = nil, --创建坐标X，可选
+   y = nil, --创建坐标Y，可选
+   loc = nil, --创建点，可选
+   height = 高度，0，可选
+   timeScalePercent = 动作时间比例，1~，可选
+   modelScalePercent = 模型缩放比例，1~，可选
+   opacity = 透明，0～255，可选
+   qty = 1, --数量，可选，可选
+   life = nil, --生命周期，到期死亡，可选
+   during = nil, --持续时间，到期删除，可选
+   facing = nil, --面向角度，可选
+   facingX = nil, --面向X，可选
+   facingY = nil, --面向Y，可选
+   facingLoc = nil, --面向点，可选
+   facingUnit = nil, --面向单位，可选
+   attackX = nil, --攻击X，可选
+   attackY = nil, --攻击Y，可选
+   attackLoc = nil, --攻击点，可选
+   attackUnit = nil, --攻击单位，可选
+   isOpenPunish = false, --是否开启硬直系统，可选
+   isShadow = false, --是否影子，可选
+   isUnSelectable = false, --是否可鼠标选中，可选
+   isPause = false, -- 是否暂停
+   isInvulnerable = false, --是否无敌，可选
+}
+@return 最后创建单位/单位组
 ```
 
-* **setAvatar**
+* **getAvatar(u)**
 ```
-设置单位类型的头像
+获取单位类型的头像
 ```
 
 * **getAttackSpeedBaseSpace**

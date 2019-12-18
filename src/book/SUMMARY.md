@@ -33,7 +33,6 @@
 * [enemy.lua 敌军](lib/enemy.md)
 * [env.lua 环境](lib/env.md)
 * [event.lua 事件](lib/event.md)
-* [filter.lua 分滤器](lib/filter.md)
 * [group.lua 单位组](lib/group.md)
 * [hero.lua (选)英雄](lib/hero.md)
 * [is.lua 判断](lib/is.md)

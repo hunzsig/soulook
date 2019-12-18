@@ -4,57 +4,59 @@ group
 
 ---
 
-* **count**
+* **count(whichGroup)**
 ```
 统计单位组当前单位数
 ```
 
-* **isIn**
+* **isIn(whichGroup, whichUnit)**
 ```
 判断单位是否在单位组内
 ```
 
-* **isEmpty**
+* **isEmpty(whichGroup)**
 ```
 判断单位组是否为空
 ```
 
-* **in**
+* **addUnit(whichGroup, whichUnit)**
 ```
 把单位加进单位组内
 ```
 
-* **out**
+* **removeUnit(whichGroup, whichUnit)**
 ```
 把单位移出单位组
 ```
 
-* **createByLoc**
+* **createByLoc(loc, radius, filterFunc)**
 ```
 以loc点为中心radius距离创建单位组
 ```
 
-* **createByUnit**
+* **createByUnit(u, radius, filterFunc)**
 ```
 以某单位为中心radius距离创建单位组
 ```
 
-* **createByRect**
+* **createByRect(r, filterFunc)**
 ```
 以某区域创建单位组
 ```
 
-* **move**
+* **move(whichGroup, loc, eff, isFollow)**
 ```
 瞬间移动单位组
 ```
 
-* **animate**
+* **animate(whichGroup, animateStr)**
 ```
 指挥单位组所有单位做动作(动画)
 ```
 
-* **clear**
+* **clear(whichGroup, isDestroy, isDestroyUnit)**
 ```
 清空单位组
+isDestroy 是否同时删除单位组
+isDestroyUnit 是否同时删除单位组里面的单位
 ```
