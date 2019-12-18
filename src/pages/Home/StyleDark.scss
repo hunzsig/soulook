@@ -10,6 +10,13 @@ $color-hr: #555555;
 $color-p: #dddddd;
 $color-p-font: #dcdee1;
 $color-li: #f0f2f5;
+$color-copyright: #ffe045;
+
+.copyright {
+  a {
+    color: $color-copyright;
+  }
+}
 
 .con {
   * {
@@ -64,6 +71,7 @@ $color-li: #f0f2f5;
   div > p {
     padding: 10px 5%;
   }
+
   blockquote > p {
     padding: 8px 5%;
     background: $color-blockquote;
@@ -76,7 +84,8 @@ $color-li: #f0f2f5;
   }
 
   code {
-    padding: 16px 7%;
+    padding: 12px 7%;
+    font-size: 90%;
   }
 
   hr {
@@ -85,7 +94,7 @@ $color-li: #f0f2f5;
     width: 100%;
     min-width: 100%;
     height: 1px;
-    margin: 24px 0;
+    margin: 18px 0;
     border: 0;
     background: $color-hr;
   }
@@ -96,12 +105,13 @@ $color-li: #f0f2f5;
     li {
       list-style: none;
       position: relative;
-      padding: 0.3rem 0 0.3rem 6%;
+      padding: 0.4rem 0 0.3rem 6%;
       margin: 0 0 .5em 10px;
       -webkit-transition: .12s;
       transition: .12s;
       cursor: default;
       color: $color-li;
+      border-bottom: 1px solid $color-hr;
     }
 
     li::before {

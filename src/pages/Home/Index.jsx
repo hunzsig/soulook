@@ -292,7 +292,7 @@ class Index extends Component {
                     <span>© Copyright 2015-{(new Date().getFullYear())} All rights reserved.</span>
                   </Col>
                   <Col xxs={24} xs={24} s={8} m={8} l={8} xl={8}>
-                    <a href="https://gitlab.com/h-web/soulook" target="_blank" className={this.state.theme}><Icon
+                    <a href="https://github.com/hunzsig/soulook" target="_blank" className={this.state.theme}><Icon
                       type="gitlab"/>&emsp;魂 书 制 作</a>
                   </Col>
                 </Row>

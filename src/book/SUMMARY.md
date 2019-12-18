@@ -19,7 +19,7 @@
 * [foundation.lua 基础库介绍](foundation/foundation.md)
 * [system.lua 基础库介绍](foundation/system.md)
 
-## 功能库(伪)
+## 功能库
 
 * [attribute.lua 属性系统](lib/attribute.md)
 * [award.lua 资源奖励](lib/award.md)
