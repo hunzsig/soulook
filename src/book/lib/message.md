@@ -1,6 +1,6 @@
 message
 
-> 调用：hmsg.method()
+> 调用：hmsg.method() or hmessage.method()
 
 ---
 
@@ -20,38 +20,6 @@ message
 * **printTo**
 ```
 在屏幕(0,0)处打印信息给某玩家
-```
-
-* **delttg**
-```
-删除漂浮字
-```
-
-* **createttg**
-```
-创建漂浮字
-设置during为0则永久显示
-color为6位颜色代码
-```
-
-* **getTtgSize**
-```
-获取漂浮字大小
-```
-
-* **getTtgColor**
-```
-获取漂浮字颜色
-```
-
-* **setTtgMsg**
-```
-设置漂浮字内容
-```
-
-* **getTtgMsg**
-```
-获取漂浮字内容
 ```
 
 * **style**

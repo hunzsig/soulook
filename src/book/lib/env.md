@@ -4,33 +4,24 @@ env
 
 ---
 
-* **clearUnits**
+* **build(whichRect, typeStr, excludeX, excludeY, isDestroyRect, ground, doodad, units)**
 ```
-创建环境蝗虫单位
-```
-
-* **removeInRect**
-```
-删除一个区域内的环境物，包括单位及装饰物
+构建环境
 ```
 
-* **removeInRange**
+* **random(whichRect, typeStr, excludeX, excludeY, isDestroyRect)**
 ```
-删除一个圆形范围内的环境物，包括单位及装饰物
+在某区域随机生成某种环境的装饰物
+typeStr:
+    summer 夏季
+    autumn 秋季
+    winter 冬季
+    wintershow 雪季
+    dark 暗黑城
+    poor 贫瘠之地
+    ruins 遗迹
+    fire 火焰熔岩
+    underground 地下城
 ```
 
-* **random**
-```
-在某区域随机生成环境装饰物
-子方法：
-    randomSummer 夏季
-    randomAutumn 秋季
-    randomWinter 冬季
-    randomWinterShow 雪季
-    randomDark 暗黑城
-    randomPoor 贫瘠之地
-    randomRuins 遗迹
-    randomFire 火焰熔岩
-    randomUnderground 地下城
-```
 

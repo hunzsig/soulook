@@ -4,9 +4,19 @@ event
 
 ---
 
-* **getLastDamageUnit**
+* **setLastDamageUnit(which, last)**
 ```
-获取最后一位伤害某单位的伤害来源
+设置某单位最后的伤害者
+```
+
+* **setLastDamageUnit(which, last)**
+```
+设置某单位最后的伤害者
+```
+
+* **getLastDamageUnit(which)**
+```
+获取某单位最后一次伤害它的伤害来源
 ```
 
 * **set/get**

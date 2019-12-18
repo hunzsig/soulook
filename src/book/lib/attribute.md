@@ -1,6 +1,6 @@
 attribute
 
-> 调用：hattr.method()
+> 调用：hattr.method() or hattribute.method()
 
 ---
 

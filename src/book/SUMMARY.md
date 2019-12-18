@@ -17,7 +17,10 @@
 
 ## 基础库
 * [foundation.lua 基础库介绍](foundation/foundation.md)
+* [debug.lua json库](foundation/debug.md)
+* [json.lua json库](foundation/json.md)
 * [system.lua 基础库介绍](foundation/system.md)
+* [color.lua 颜色](foundation/color.md)
 
 ## 功能库
 
@@ -46,6 +49,7 @@
 * [rect.lua 区域](lib/rect.md)
 * [skill.lua 技能](lib/skill.md)
 * [sound.lua 声音](lib/sound.md)
+* [textTag.lua 漂浮字](lib/textTag.md)
 * [time.lua 时间](lib/time.md)
 * [unit.lua 单位](lib/unit.md)  
 * [weather.lua 天气](lib/weather.md)  
