@@ -116,7 +116,7 @@
 }
 
 .h-layout.small {
-  font-size: 14px !important;
+  font-size: 15px !important;
 }
 
 .h-layout.big {
@@ -141,5 +141,12 @@
   .footer {
     padding: 2px 0 !important;
     font-size: 10px !important;
+  }
+  .h-layout.small {
+    font-size: 2vh !important;
+  }
+
+  .h-layout.big {
+    font-size: 2.8vh !important;
   }
 }

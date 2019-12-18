@@ -3,7 +3,7 @@
 $color-shine: #ffffff;
 $color-main: #f0f2f5;
 $color-sub: #272727;
-$color-blockquote: #2b2b2b;
+$color-blockquote: #3d3d3d;
 $color-href: #ffe045;
 $color-h-href: #ff191a;
 $color-hr: #555555;
@@ -21,7 +21,7 @@ $color-li: #f0f2f5;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    padding-left: 20px;
+    padding-left: 5%;
     background: $color-main;
     color: $color-sub !important;
     border-radius: 3px;
@@ -62,11 +62,12 @@ $color-li: #f0f2f5;
   }
 
   div > p {
-    padding: 20px;
+    padding: 10px 5%;
   }
   blockquote > p {
-    padding: 13px 5px;
+    padding: 8px 5%;
     background: $color-blockquote;
+    font-style: oblique;
   }
 
   p {
@@ -75,7 +76,7 @@ $color-li: #f0f2f5;
   }
 
   code {
-    padding: 20px 50px;
+    padding: 16px 7%;
   }
 
   hr {
@@ -90,12 +91,12 @@ $color-li: #f0f2f5;
   }
 
   ul {
-    padding: 0.5rem 0 0.3rem 0.7em;
+    padding: 0.5rem 0 0.3rem 1%;
 
     li {
       list-style: none;
       position: relative;
-      padding: 0.3rem 0 0.3rem 2em;
+      padding: 0.3rem 0 0.3rem 6%;
       margin: 0 0 .5em 10px;
       -webkit-transition: .12s;
       transition: .12s;

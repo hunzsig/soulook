@@ -12,7 +12,6 @@
       "dev": "src/index.js",
       "prod": "src/index.js"
     },
-    "hot": false,
     "import": [
       {
         "libraryName": "antd",

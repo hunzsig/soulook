@@ -21,7 +21,7 @@ $color-li: #444444;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    padding-left: 20px;
+    padding-left: 5%;
     background: $color-main;
     color: $color-sub !important;
     border-radius: 3px;
@@ -64,12 +64,13 @@ $color-li: #444444;
   }
 
   div > p {
-    padding: 20px;
+    padding: 10px 5%;
   }
 
   blockquote > p {
-    padding: 13px 5px;
+    padding: 8px 5%;
     background: $color-blockquote;
+    font-style: oblique;
   }
 
   p {
@@ -78,7 +79,7 @@ $color-li: #444444;
   }
 
   code {
-    padding: 20px 50px;
+    padding: 16px 7%;
   }
 
   hr {
@@ -93,12 +94,12 @@ $color-li: #444444;
   }
 
   ul {
-    padding: 0.5rem 0 0.3rem 0.7em;
+    padding: 0.5rem 0 0.3rem 1%;
 
     li {
       list-style: none;
       position: relative;
-      padding: 0.3rem 0 0.3rem 2em;
+      padding: 0.3rem 0 0.3rem 6%;
       margin: 0 0 .5em 10px;
       -webkit-transition: .12s;
       transition: .12s;
