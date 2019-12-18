@@ -4,311 +4,298 @@ player
 
 ---
 
-* **players**
-```
-全局变量 - 获取玩家
-players[1] 代表玩家1
-players[7] 代表玩家7
-```
-
-* **index**
-```
-获取玩家的索引
-```
-
-* **getRandomUnit**
-```
-获取玩家一个随机英雄单位
-```
-
-* **getApm**
-```
-获取玩家的APM
-```
-
-* **getSelection**
-```
-获取玩家当前勾选的单位
-```
-
-* **setStatus**
-```
-设置玩家状态
+* **vars**
+```lua
+hplayer = {
+    --用户玩家 players[1] 代表玩家1
+    players = {},
+    --中立敌对
+    player_aggressive = cj.Player(PLAYER_NEUTRAL_AGGRESSIVE),
+    --中立受害
+    player_victim = cj.Player(bj_PLAYER_NEUTRAL_VICTIM),
+    --中立特殊
+    player_extra = cj.Player(bj_PLAYER_NEUTRAL_EXTRA),
+    --中立被动
+    player_passive = cj.Player(PLAYER_NEUTRAL_PASSIVE),
+    --玩家状态
+    player_status = {
+        none = "无参与",
+        gaming = "游戏中",
+        leave = "已离开",
+    },
+    --用户玩家最大数量
+    qty_max = 12,
+    --当前玩家数量
+    qty_current = 0,
+    --换算比率，默认：1000000金 -> 1木
+    convert_ratio = 1000000,
+}
 ```
 
-* **getStatus**
+* **adjustPlayerState(delta, whichPlayer, whichPlayerState)**
 ```
-获取玩家状态
-```
-
-* **defeat**
-```
-令玩家失败
+增加玩家状态，参考原生魔兽jass
 ```
 
-* **victory**
+* **setPlayerState(whichPlayer, whichPlayerState, value)**
 ```
-令玩家成功
+设置玩家状态，参考原生魔兽jass
 ```
 
-* **setConvertRatio**
+* **setConvertRatio(ratio)**
 ```
 设置换算比率
 ```
 
-* **getConvertRatio**
+* **getConvertRatio()**
 ```
 获取换算比率
 ```
 
-* **setIsAutoConvert**
+* **index(whichPlayer)**
+```
+获取玩家ID，例如：玩家一等于1，玩家三等于3
+```
+
+* **getSelection(whichPlayer)**
+```
+获取玩家当前勾选的单位
+```
+
+* **getStatus(whichPlayer)**
+```
+获取玩家状态
+```
+
+* **getApm(whichPlayer)**
+```
+获取玩家的APM
+```
+
+* **getRandomHero()**
+```
+在所有玩家里获取一个随机的英雄
+```
+
+* **defeat(whichPlayer, tips)**
+```
+令玩家失败
+```
+
+* **victory(whichPlayer)**
+```
+令玩家成功
+```
+
+* **setIsAutoConvert(whichPlayer, b)**
 ```
 设置是否自动将{hAwardConvertRatio}黄金换1木头
 ```
 
-* **getIsAutoConvert**
+* **getIsAutoConvert(whichPlayer)**
 ```
 获取是否自动将{hAwardConvertRatio}黄金换1木头
 ```
 
-* **getDamage**
+* **getDamage(whichPlayer)**
 ```
 获取玩家造成的总伤害
 ```
 
-* **addDamage**
+* **addDamage(whichPlayer, val)**
 ```
 增加玩家造成的总伤害
 ```
 
-* **getBeDamage**
+* **getBeDamage(whichPlayer)**
 ```
 获取玩家受到的总伤害
 ```
 
-* **addBeDamage**
+* **addBeDamage(whichPlayer, val)**
 ```
 增加玩家受到的总伤害
 ```
 
-* **getKill**
+* **getKill(whichPlayer)**
 ```
 获取玩家杀敌数
 ```
 
-* **addKill**
+* **addKill(whichPlayer, val)**
 ```
 增加玩家杀敌数
 ```
 
-* **getLifeSourceRatio**
+* **getLifeSourceRatio(whichPlayer)**
 ```
 获取玩家生命源设定百分比
 ```
 
-* **setLifeSourceRatio**
-```
-设置玩家生命源设定百分比
-```
-
-* **getManaSourceRatio**
+* **getManaSourceRatio(whichPlayer)**
 ```
 获取玩家魔法源设定百分比
 ```
 
-* **setManaSourceRatio**
-```
-设置玩家魔法源设定百分比
-```
-
-* **getGoldRatio**
-```
-获取玩家黄金收获比
-```
-
-* **setGoldRatio**
+* **setGoldRatio(whichPlayer, val, during)**
 ```
 设置玩家黄金收获比
 ```
 
-* **addGoldRatio**
+* **addGoldRatio(whichPlayer, val, during)**
 ```
 增加玩家黄金收获比
 ```
 
-* **subGoldRatio**
+* **subGoldRatio(whichPlayer, val, during)**
 ```
 减少玩家黄金收获比
 ```
 
-* **getLumberRatio**
+* **getGoldRatio(whichPlayer)**
 ```
-获取玩家木头收获比
+获取玩家黄金收获比
 ```
 
-* **setLumberRatio**
+
+
+* **setLumberRatio(whichPlayer, val, during)**
 ```
 设置玩家木头收获比
 ```
 
-* **addLumberRatio**
+* **addLumberRatio(whichPlayer, val, during)**
 ```
 增加玩家木头收获比
 ```
 
-* **subLumberRatio**
+* **subLumberRatio(whichPlayer, val, during)**
 ```
 减少玩家木头收获比
 ```
 
-* **getExpRatio**
+* **getLumberRatio(whichPlayer)**
 ```
-获取玩家经验收获比
+获取玩家木头收获比
 ```
 
-* **setExpRatio**
+
+* **setExpRatio(whichPlayer, val, during)**
 ```
 设置玩家经验收获比
 ```
 
-* **addExpRatio**
+* **addExpRatio(whichPlayer, val, during)**
 ```
 增加玩家经验收获比
 ```
 
-* **subExpRatio**
+* **subExpRatio(whichPlayer, val, during)**
 ```
 减少玩家经验收获比
 ```
 
-* **getSellRatio**
+* **getExpRatio(whichPlayer)**
 ```
-获取玩家售卖收获比
+获取玩家经验收获比
 ```
 
-* **setSellRatio**
+* **setSellRatio(whichPlayer, val, during)**
 ```
 设置玩家售卖收获比
 ```
 
-* **addSellRatio**
+* **addSellRatio(whichPlayer, val, during)**
 ```
 增加玩家售卖收获比
 ```
 
-* **subSellRatio**
+* **subSellRatio(whichPlayer, val, during)**
 ```
 减少玩家售卖收获比
 ```
 
-* **adjustGold**
+* **getSellRatio(whichPlayer)**
 ```
-核算玩家的金钱
-主要用于调节h-vjass系统与原生系统资源上不对等的关系
-```
-
-* **getGold**
-```
-获取玩家金钱
+获取玩家售卖收获比
 ```
 
-* **setGold**
-```
-设置玩家金钱
-```
-
-* **addGold**
-```
-增加玩家金钱
-```
-
-* **subGold**
-```
-减少玩家金钱
-```
-
-* **getTotalGold**
+* **getTotalGold(whichPlayer)**
 ```
 获取玩家总获金量
 ```
 
-* **addTotalGold**
+* **addTotalGold(whichPlayer, val)**
 ```
 增加玩家总获金量
 ```
 
-* **getTotalGoldCost**
+* **getTotalGoldCost(whichPlayer)**
 ```
 获取玩家总耗金量
 ```
 
-* **addTotalGoldCost**
+* **addTotalGoldCost(whichPlayer, val)**
 ```
 增加玩家总耗金量
 ```
 
-* **getPrevGold**
-```
-获取玩家前次金量（默认0）
-```
-
-* **setPrevGold**
-```
-设置玩家前次金量（默认0）
-```
-
-* **adjustLumber**
-```
-核算玩家的木头
-主要用于调节h-vjass系统与原生系统资源上不对等的关系
-```
-
-* **getLumber**
-```
-获取玩家木头
-```
-
-* **setLumber**
-```
-设置玩家木头
-```
-
-* **addLumber**
-```
-增加玩家木头
-```
-
-* **subLumber**
-```
-减少玩家木头
-```
-
-* **getTotalLumber**
+* **getTotalLumber(whichPlayer)**
 ```
 获取玩家总获木量
 ```
 
-* **addTotalLumber**
+* **addTotalLumber(whichPlayer, val)**
 ```
 增加玩家总获木量
 ```
 
-* **getTotalLumberCost**
+* **getTotalLumberCost(whichPlayer)**
 ```
 获取玩家总耗木量
 ```
 
-* **addTotalLumberCost**
+* **addTotalLumberCost(whichPlayer, val)**
 ```
 增加玩家总耗木量
 ```
 
-* **getPrevLumber**
+* **getGold(whichPlayer)**
 ```
-获取玩家前次木量（默认0）
+获取玩家金钱
 ```
 
-* **setPrevLumber**
+* **setGold(whichPlayer, gold)**
 ```
-设置玩家前次木量（默认0）
+设置玩家金钱
+```
+
+* **addGold(whichPlayer, gold)**
+```
+增加玩家金钱
+```
+
+* **subGold(whichPlayer, gold)**
+```
+减少玩家金钱
+```
+
+* **getLumber(whichPlayer)**
+```
+获取玩家木头
+```
+
+* **setLumber(whichPlayer, lumber)**
+```
+设置玩家木头
+```
+
+* **addLumber(whichPlayer, lumber)**
+```
+增加玩家木头
+```
+
+* **subLumber(whichPlayer, lumber)**
+```
+减少玩家木头
 ```

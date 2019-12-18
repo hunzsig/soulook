@@ -4,586 +4,687 @@ event
 
 ---
 
-* **getLastDamageUnit**
+* **setLastDamageUnit(which, last)**
 ```
-获取最后一位伤害某单位的伤害来源
+设置某单位最后的伤害者
 ```
 
-* **set/get**
+* **setLastDamageUnit(which, last)**
 ```
-事件get/set方法，用于触发事件时获取触发对象
-setTriggerUnit / getTriggerUnit
-setTriggerEnterUnit / getTriggerEnterUnit
-setTriggerRect / getTriggerRect
-setTriggerItem / getTriggerItem
-setTriggerPlayer / getTriggerPlayer
-setTriggerString / getTriggerString
-setTriggerStringMatched / getTriggerStringMatched
-setTriggerSkill / getTriggerSkill
-setSourceUnit / getSourceUnit
-setTargetUnit / getTargetUnit
-setTargetLoc / getTargetLoc
-setAttacker / getAttacker
-setKiller / getKiller
-setDamage / getDamage
-setRealDamage / getRealDamage
-setId / getId
-setRange / getRange
-setValue / getValue
-setValue2 / getValue2
-setValue3 / getValue3
-setDuring / getDuring
-setDamageKind / getDamageKind
-setDamageType / getDamageType
-setBreakType / getBreakType
-setType / getType
-setIsNoAvoid / getIsNoAvoid
+设置某单位最后的伤害者
 ```
 
-* **onAttackDetect**
+* **triggerEvent(bean)**
 ```
-on - 注意到攻击目标
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取被注意/目标单位
+触发事件（通用）
+! 慎用，建议看源码来用
 ```
 
-* **onAttackGetTarget**
+* **get()**
 ```
-on - 获取攻击目标
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取被获取/目标单位
+事件get方法，用于触发事件时获取触发对象
+getTriggerUnit()
+getTriggerEnterUnit()
+getTriggerRect()
+getTriggerItem()
+getTriggerPlayer()
+getTriggerString()
+getTriggerStringMatched()
+getTriggerSkill()
+getSourceUnit()
+getTargetUnit()
+getTargetLoc()
+getAttacker()
+getKiller()
+getDamage()
+getRealDamage()
+getId()
+getRange()
+getQty()
+getIndex()
+getHigh()
+getDistance()
+getValue()
+getPercent()
+getDuring()
+getDamageKind()
+getDamageType()
+getBreakType()
+getType()
+getIsNoAvoid()
 ```
 
-* **onAttackReady**
+* **onAttackDetect(whichUnit, action)**
 ```
-on - 准备攻击
-@getTriggerUnit 获取攻击单位
-@getTargetUnit 获取被攻击单位
-@getAttacker 获取攻击单位
+当注意到攻击目标
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取被注意/目标单位
 ```
 
-* **onBeAttackReady**
+* **onAttackGetTarget(whichUnit, action)**
 ```
-on - 准备被攻击
-@getTriggerUnit 获取被攻击单位
-@getTargetUnit 获取攻击单位
-@getAttacker 获取攻击单位
+当获取攻击目标
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取被获取/目标单位
 ```
 
-* **onAttack**
+* **onAttackReady(whichUnit, action)**
 ```
-on - 造成攻击
-@getTriggerUnit 获取攻击来源
-@getTargetUnit 获取被攻击单位
-@getAttacker 获取攻击来源
-@getDamage 获取初始伤害
-@getRealDamage 获取实际伤害
-@getDamageKind 获取伤害方式
-@getDamageType 获取伤害类型
+当准备攻击
+@ hevent.getTriggerUnit 获取攻击单位
+@ hevent.getTargetUnit 获取被攻击单位
+@ hevent.getAttacker 获取攻击单位
 ```
 
-* **onBeAttack**
+* **onBeAttackReady(whichUnit, action)**
 ```
-on - 承受攻击
-@getTriggerUnit 获取被攻击单位
-@getAttacker 获取攻击来源
-@getDamage 获取初始伤害
-@getRealDamage 获取实际伤害
-@getDamageKind 获取伤害方式
-@getDamageType 获取伤害类型
+当准备被攻击
+@ hevent.getTriggerUnit 获取被攻击单位
+@ hevent.getTargetUnit 获取攻击单位
+@ hevent.getAttacker 获取攻击单位
 ```
 
-* **onSkillStudy**
+* **onAttack(whichUnit, action)**
 ```
-on - 学习技能
-@getTriggerUnit 获取学习单位
-@getTriggerSkill 获取学习技能ID
+当造成攻击
+@ hevent.getTriggerUnit 获取攻击来源
+@ hevent.getTargetUnit 获取被攻击单位
+@ hevent.getAttacker 获取攻击来源
+@ hevent.getDamage 获取初始伤害
+@ hevent.getRealDamage 获取实际伤害
+@ hevent.getDamageKind 获取伤害方式
+@ hevent.getDamageType 获取伤害类型
 ```
 
-* **onSkillReady**
+* **onBeAttack(whichUnit, action)**
 ```
-on - 准备施放技能
-@getTriggerUnit 获取施放单位
-@getTargetUnit 获取目标单位(只对对目标施放有效)
-@getTriggerSkill 获取施放技能ID
-@getTargetLoc 获取施放目标点
+当承受攻击
+@ hevent.getTriggerUnit 获取被攻击单位
+@ hevent.getAttacker 获取攻击来源
+@ hevent.getDamage 获取初始伤害
+@ hevent.getRealDamage 获取实际伤害
+@ hevent.getDamageKind 获取伤害方式
+@ hevent.getDamageType 获取伤害类型
 ```
 
-* **onSkillStart**
+* **onSkillStudy(whichUnit, action)**
 ```
-on - 开始施放技能
-@getTriggerUnit 获取施放单位
-@getTargetUnit 获取目标单位(只对对目标施放有效)
-@getTriggerSkill 获取施放技能ID
-@getTargetLoc 获取施放目标点
+当学习技能
+@ hevent.getTriggerUnit 获取学习单位
+@ hevent.getTriggerSkill 获取学习技能ID
 ```
 
-* **onSkillStop**
+* **onSkillReady(whichUnit, action)**
 ```
-on - 停止施放技能
-@getTriggerUnit 获取施放单位
-@getTriggerSkill 获取施放技能ID
+当准备施放技能
+@ hevent.getTriggerUnit 获取施放单位
+@ hevent.getTargetUnit 获取目标单位(只对对目标施放有效)
+@ hevent.getTriggerSkill 获取施放技能ID
+@ hevent.getTargetLoc 获取施放目标点
 ```
 
-* **onSkillHappen**
+* **onSkillStart(whichUnit, action)**
 ```
-on - 发动技能效果
-@getTriggerUnit 获取施放单位
-@getTargetUnit 获取目标单位(只对对目标施放有效)
-@getTriggerSkill 获取施放技能ID
-@getTargetLoc 获取施放目标点
+当开始施放技能
+@ hevent.getTriggerUnit 获取施放单位
+@ hevent.getTargetUnit 获取目标单位(只对对目标施放有效)
+@ hevent.getTriggerSkill 获取施放技能ID
+@ hevent.getTargetLoc 获取施放目标点
 ```
 
-* **onSkillOver**
+* **onSkillStop(whichUnit, action)**
 ```
-on - 施放技能结束
-@getTriggerUnit 获取施放单位
-@getTriggerSkill 获取施放技能ID
+当停止施放技能
+@ hevent.getTriggerUnit 获取施放单位
+@ hevent.getTriggerSkill 获取施放技能ID
 ```
 
-* **onItemUsed**
+* **onSkillHappen(whichUnit, action)**
 ```
-on - 单位使用物品
-@getTriggerUnit 获取触发单位
-@getTriggerItem 获取触发物品
+当发动技能效果
+@ hevent.getTriggerUnit 获取施放单位
+@ hevent.getTargetUnit 获取目标单位(只对对目标施放有效)
+@ hevent.getTriggerSkill 获取施放技能ID
+@ hevent.getTargetLoc 获取施放目标点
 ```
 
-* **onItemSell**
+* **onSkillOver(whichUnit, action)**
 ```
-on - 出售物品(商店卖给玩家)
-@getTriggerUnit 获取触发单位
-@getTriggerItem 获取触发物品
+当施放技能结束
+@ hevent.getTriggerUnit 获取施放单位
+@ hevent.getTriggerSkill 获取施放技能ID
 ```
 
-* **onItemDrop**
+* **onItemUsed(whichUnit, action)**
 ```
-on - 丢弃物品
-@getTriggerUnit 获取触发/出售单位
-@targetUnit 获取购买单位
-@getTriggerItem 获取触发/出售物品
+当单位使用物品
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTriggerItem 获取触发物品
 ```
 
-* **onItemGet**
+* **onItemSell(whichUnit, action)**
 ```
-on - 获得物品
-@getTriggerUnit 获取触发单位
-@getTriggerItem 获取触发物品
+当出售物品(商店卖给玩家)
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTriggerItem 获取触发物品
 ```
 
-* **onItemPawn**
+* **onItemDrop(whichUnit, action)**
 ```
-on - 抵押物品（玩家把物品扔给商店）
-@getTriggerUnit 获取触发单位
-@getTriggerItem 获取触发物品
+当丢弃物品
+@ hevent.getTriggerUnit 获取触发/出售单位
+@ hevent.getTargetUnit 获取购买单位
+@ hevent.getTriggerItem 获取触发/出售物品
 ```
 
-* **onItemDestroy**
+* **onItemGet(whichUnit, action)**
 ```
-on - 物品被破坏
-@getTriggerUnit 获取触发单位
-@getTriggerItem 获取触发物品
+当获得物品
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTriggerItem 获取触发物品
 ```
 
-* **onItemMix**
+* **onItemPawn(whichUnit, action)**
 ```
-on - 合成物品
-@getTriggerUnit 获取触发单位
-@getTriggerItem 获取合成的物品
+当抵押物品（玩家把物品扔给商店）
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTriggerItem 获取触发物品
 ```
 
-* **onItemSeparate**
+* **onItemDestroy(whichUnit, action)**
 ```
-on - 拆分物品
-@getTriggerUnit 获取触发单位
-@getId 获取拆分的物品ID
-@getType 获取拆分的类型
-    simple 单件拆分
-    mixed 合成品拆分
+当物品被破坏
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTriggerItem 获取触发物品
 ```
 
+* **onItemMix(whichUnit, action)**
+```
+当合成物品
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTriggerItem 获取合成的物品
+```
+
+* **onItemSeparate(whichUnit, action)**
+```
+当拆分物品
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getId 获取拆分的物品ID
+@ hevent.getType 获取拆分的类型
+    simple 单件拆分(同一种物品拆成很多件)
+    mixed 合成品拆分(一种物品拆成零件的种类)
+```
+
+
+* **onDamage(whichUnit, action)**
+```
+当造成伤害
+@ hevent.getTriggerUnit 获取伤害来源
+@ hevent.getTargetUnit 获取被伤害单位
+@ hevent.getSourceUnit 获取伤害来源
+@ hevent.getDamage 获取初始伤害
+@ hevent.getRealDamage 获取实际伤害
+@ hevent.getDamageKind 获取伤害方式
+@ hevent.getDamageType 获取伤害类型
+```
+
+* **onBeDamage(whichUnit, action)**
+```
+当承受伤害
+@ hevent.getTriggerUnit 获取被伤害单位
+@ hevent.getSourceUnit 获取伤害来源
+@ hevent.getDamage 获取初始伤害
+@ hevent.getRealDamage 获取实际伤害
+@ hevent.getDamageKind 获取伤害方式
+```
+
+* **onAvoid(whichUnit, action)**
+```
+当回避攻击成功
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getAttacker 获取攻击单位
+```
+
+* **onBeAvoid(whichUnit, action)**
+```
+当攻击被回避
+@ hevent.getTriggerUnit 获取攻击单位
+@ hevent.getAttacker 获取攻击单位
+@ hevent.getTargetUnit 获取回避的单位
+```
+
+* **onBreakArmor(whichUnit, action)**
+```
+当破防（护甲/魔抗）成功
+@ hevent.getBreakType 获取无视类型
+@ hevent.getTriggerUnit 获取破甲单位
+@ hevent.getTargetUnit 获取目标单位
+@ hevent.getValue 获取破甲的数值
+```
+
+* **onBeBreakArmor**
+```
+当被成功破防（护甲/魔抗）
+@ hevent.getBreakType 获取无视类型
+@ hevent.getTriggerUnit 获取被破甲单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getValue 获取破甲的数值
+```
+
+* **onSwim(whichUnit, action)**
+```
+当眩晕成功
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取被眩晕单位
+@ hevent.getDuring 获取眩晕时间（秒）
+@ hevent.getDamage 获取眩晕伤害
+```
+
+* **onBeSwim(whichUnit, action)**
+```
+当被眩晕
+@ hevent.getTriggerUnit 获取被眩晕单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDuring 获取眩晕时间（秒）
+@ hevent.getDamage 获取眩晕伤害
+```
+
+* **onBroken(whichUnit, action)**
+```
+当打断成功
+@ hevent.getTriggerUnit 获取触发单位(打断单位)
+@ hevent.getTargetUnit 获取被打断单位
+@ hevent.getDamage 获取打断伤害
+```
 
-* **onDamage**
+* **onBeBroken(whichUnit, action)**
 ```
-on - 造成伤害
-@getTriggerUnit 获取伤害来源
-@getTargetUnit 获取被伤害单位
-@getSourceUnit 获取伤害来源
-@getDamage 获取初始伤害
-@getRealDamage 获取实际伤害
-@getDamageKind 获取伤害方式
-@getDamageType 获取伤害类型
+当被打断
+@ hevent.getTriggerUnit 获取被打断单位
+@ hevent.getSourceUnit 获取来源单位(打断单位)
+@ hevent.getDamage 获取打断伤害
 ```
 
-* **onBeDamage**
+* **onSilent(whichUnit, action)**
 ```
-on - 承受伤害
-@getTriggerUnit 获取被伤害单位
-@getSourceUnit 获取伤害来源
-@getDamage 获取初始伤害
-@getRealDamage 获取实际伤害
-@getDamageKind 获取伤害方式
+当沉默成功
+@ hevent.getTriggerUnit 获取触发单位(沉默单位)
+@ hevent.getTargetUnit 获取被沉默单位
+@ hevent.getDuring 获取沉默时间（秒）
+@ hevent.getDamage 获取沉默伤害
 ```
 
-* **onAvoid**
+* **onBeSilent(whichUnit, action)**
 ```
-on - 攻击被回避
-@getTriggerUnit 获取攻击单位
-@getAttacker 获取攻击单位
-@getTargetUnit 获取回避的单位
+当被沉默
+@ hevent.getTriggerUnit 获取被沉默单位
+@ hevent.getSourceUnit 获取来源单位(使用沉默单位)
+@ hevent.getDuring 获取沉默时间（秒）
+@ hevent.getDamage 获取沉默伤害
 ```
 
-* **onBreakDefend**
+* **onUnarm(whichUnit, action)**
 ```
-on - 无视护甲成功
-@getBreakType 获取无视类型
-@getTriggerUnit 获取破甲单位
-@getTargetUnit 获取目标单位
-@getValue 获取破甲的数值
+当缴械成功
+@ hevent.getTriggerUnit 获取触发单位(缴械单位)
+@ hevent.getTargetUnit 获取被缴械单位
+@ hevent.getDuring 获取缴械时间（秒）
+@ hevent.getDamage 获取缴械伤害
 ```
 
-* **onBeBreakDefend**
+* **onBeUnarm(whichUnit, action)**
 ```
-on - 被无视护甲
-@getBreakType 获取无视类型
-@getTriggerUnit 获取被破甲单位
-@getSourceUnit 获取来源单位
-@getValue 获取破甲的数值
+当被缴械
+@ hevent.getTriggerUnit 获取被缴械单位
+@ hevent.getSourceUnit 获取来源单位(使用缴械单位)
+@ hevent.getDuring 获取缴械时间（秒）
+@ hevent.getDamage 获取缴械伤害
 ```
 
-* **onBreakResistance**
+* **onFetter(whichUnit, action)**
 ```
-on - 无视魔抗成功
-@getBreakType 获取无视类型
-@getTriggerUnit 获取破抗单位
-@getTargetUnit 获取目标单位
-@getValue 获取破抗的百分比
+当缚足成功
+@ hevent.getTriggerUnit 获取触发单位(缚足单位)
+@ hevent.getTargetUnit 获取被缚足单位
+@ hevent.getDuring 获取缚足时间（秒）
+@ hevent.getDamage 获取缚足伤害
 ```
 
-* **onBeBreakResistance**
+* **onBeFetter(whichUnit, action)**
 ```
-on - 被无视魔抗
-@getBreakType 获取无视类型
-@getTriggerUnit 获取被破抗单位
-@getSourceUnit 获取来源单位
-@getValue 获取破抗的百分比
+当被缚足
+@ hevent.getTriggerUnit 获取被缚足单位
+@ hevent.getSourceUnit 获取来源单位(使用缚足单位)
+@ hevent.getDuring 获取缚足时间（秒）
+@ hevent.getDamage 获取缚足伤害
 ```
 
-* **onBreakDefendAndResistance**
+* **onBomb(whichUnit, action)**
 ```
-on - 无视护甲和魔抗同时成功
-@getBreakType 获取无视类型
-@getTriggerUnit 获取破甲/抗单位
-@getTargetUnit 获取目标单位
-@getValue 获取破甲的数值
-@getValue2 获取破抗的百分比
+当爆破成功
+@ hevent.getTriggerUnit 获取触发单位(爆破单位)
+@ hevent.getTargetUnit 获取被爆破单位
+@ hevent.getDamage 获取爆破伤害
+@ hevent.getRange 获取爆破范围
 ```
 
-* **onBeBreakDefendAndResistance**
+* **onBeBomb(whichUnit, action)**
 ```
-on - 被同时无视护甲和魔抗
-@getBreakType 获取无视类型
-@getTriggerUnit 获取被破甲/抗单位
-@getSourceUnit 获取来源单位
-@getValue 获取破甲的数值
-@getValue2 获取破抗的百分比
+当被爆破
+@ hevent.getTriggerUnit 获取被爆破单位
+@ hevent.getSourceUnit 获取来源单位(使用爆破单位)
+@ hevent.getDamage 获取爆破伤害
+@ hevent.getRange 获取爆破范围
 ```
+
 
-* **onSwim**
+* **onLightningChain(whichUnit, action)**
 ```
-on - 眩晕成功
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取被眩晕单位
-@getValue 获取眩晕几率百分比
-@getDuring 获取眩晕时间（秒）
+当闪电链电到人
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取被闪电链电到的单位
+@ hevent.getDamage 获取闪电链伤害
+@ hevent.getRange 获取闪电链范围
+@ hevent.getQty 获取闪电链数量
 ```
 
-* **onBeSwim**
+* **onBeLightningChain(whichUnit, action)**
 ```
-on - 被眩晕
-@getTriggerUnit 获取被眩晕单位
-@getSourceUnit 获取来源单位
-@getValue 获取眩晕几率百分比
-@getDuring 获取眩晕时间（秒）
+当被闪电链电到
+@ hevent.getTriggerUnit 获取被闪电链单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取闪电链范围
+@ hevent.getIndex 获取单位是第几个被电到的
 ```
 
-* **onRebound**
+* **onCrackFly(whichUnit, action)**
 ```
-on - 反伤时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getDamage 获取反伤伤害
+当击飞成功
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取被击飞单位
+@ hevent.getDamage 获取击飞伤害
+@ hevent.getHigh 获取击飞高度
+@ hevent.getDistance 获取击飞距离
 ```
 
-* **onNoAvoid**
+* **onBeCrackFly(whichUnit, action)**
 ```
-on - 造成无法回避的伤害时
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取目标单位
-@getDamage 获取伤害值
+当被击飞
+@ hevent.getTriggerUnit 获取被击飞单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取击飞伤害
+@ hevent.getHigh 获取击飞高度
+@ hevent.getDistance 获取击飞距离
 ```
 
-* **onBeNoAvoid**
+* **onRebound(whichUnit, action)**
 ```
-on - 被造成无法回避的伤害时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getDamage 获取暴击伤害值
+当反伤时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取反伤伤害
 ```
 
-* **onKnocking**
+* **onNoAvoid(whichUnit, action)**
 ```
-on - 物理暴击时
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取目标单位
-@getDamage 获取暴击伤害值
-@getValue 获取暴击几率百分比
-@getValue2 获取暴击增幅百分比
+当造成无法回避的伤害时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取目标单位
+@ hevent.getDamage 获取伤害值
 ```
 
-* **onBeKnocking**
+* **onBeNoAvoid(whichUnit, action)**
 ```
-on - 承受物理暴击时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getDamage 获取暴击伤害值
-@getValue 获取暴击几率百分比
-@getValue2 获取暴击增幅百分比
+当被造成无法回避的伤害时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取暴击伤害值
 ```
 
-* **onViolence**
+* **onKnocking(whichUnit, action)**
 ```
-on - 魔法暴击时
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取目标单位
-@getDamage 获取暴击伤害值
-@getValue 获取暴击几率百分比
-@getValue2 获取暴击增幅百分比
+当物理暴击时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取目标单位
+@ hevent.getDamage 获取暴击伤害值
+@ hevent.getValue 获取暴击几率百分比
+@ hevent.getPercent 获取暴击增幅百分比
 ```
 
-* **onBeViolence**
+* **onBeKnocking(whichUnit, action)**
 ```
-on - 承受魔法暴击时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getDamage 获取暴击伤害值
-@getValue 获取暴击几率百分比
-@getValue2 获取暴击增幅百分比
+当承受物理暴击时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取暴击伤害值
+@ hevent.getValue 获取暴击几率百分比
+@ hevent.getPercent 获取暴击增幅百分比
 ```
 
-* **onSpilt**
+* **onViolence(whichUnit, action)**
 ```
-on - 分裂时
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取目标单位
-@getDamage 获取分裂伤害值
-@getRange 获取分裂范围(px)
-@getValue 获取分裂百分比
+当魔法暴击时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取目标单位
+@ hevent.getDamage 获取暴击伤害值
+@ hevent.getValue 获取暴击几率百分比
+@ hevent.getPercent 获取暴击增幅百分比
 ```
 
-* **onBeSpilt**
+* **onBeViolence(whichUnit, action)**
 ```
-on - 承受分裂时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getDamage 获取分裂伤害值
-@getRange 获取分裂范围(px)
-@getValue 获取分裂百分比
+当承受魔法暴击时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取暴击伤害值
+@ hevent.getValue 获取暴击几率百分比
+@ hevent.getPercent 获取暴击增幅百分比
 ```
 
-* **onHemophagia**
+* **onSpilt(whichUnit, action)**
 ```
-on - 吸血时
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取目标单位
-@getDamage 获取吸血值
-@getValue 获取吸血百分比
+当分裂时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取目标单位
+@ hevent.getDamage 获取分裂伤害值
+@ hevent.getRange 获取分裂范围(px)
+@ hevent.getPercent 获取分裂百分比
 ```
 
-* **onBeHemophagia**
+* **onBeSpilt(whichUnit, action)**
 ```
-on - 被吸血时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getDamage 获取吸血值
-@getValue 获取吸血百分比
+当承受分裂时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取分裂伤害值
+@ hevent.getRange 获取分裂范围(px)
+@ hevent.getPercent 获取分裂百分比
 ```
 
-* **onSkillHemophagia**
+* **onLimitToughness(whichUnit, action)**
 ```
-on - 技能吸血时
-@getTriggerUnit 获取触发单位
-@getTargetUnit 获取目标单位
-@getDamage 获取吸血值
-@getValue 获取吸血百分比
+当发生极限减伤抵抗（减伤不足以抵扣）
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
 ```
 
-* **onBeSkillHemophagia**
+* **onHemophagia(whichUnit, action)**
 ```
-on - 被技能吸血时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getDamage 获取吸血值
-@getValue 获取吸血百分比
+当吸血时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取目标单位
+@ hevent.getDamage 获取吸血值
+@ hevent.getPercent 获取吸血百分比
 ```
 
-* **onPunish**
+* **onBeHemophagia(whichUnit, action)**
 ```
-on - 硬直时
-@getTriggerUnit 获取触发单位
-@getSourceUnit 获取来源单位
-@getValue 获取硬直程度百分比
-@getDuring 获取持续时间
+当被吸血时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取吸血值
+@ hevent.getPercent 获取吸血百分比
 ```
 
-* **onDead**
+* **onSkillHemophagia(whichUnit, action)**
 ```
-on - 死亡时
-@getTriggerUnit 获取触发单位
-@getKiller 获取凶手单位
+当技能吸血时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getTargetUnit 获取目标单位
+@ hevent.getDamage 获取吸血值
+@ hevent.getPercent 获取吸血百分比
 ```
 
-* **onKill**
+* **onBeSkillHemophagia(whichUnit, action)**
 ```
-on - 击杀时
-@getTriggerUnit 获取触发单位
-@getKiller 获取凶手单位
-@getTargetUnit 获取死亡单位
+当被技能吸血时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getDamage 获取吸血值
+@ hevent.getPercent 获取吸血百分比
 ```
 
-* **onReborn**
+* **onPunish(whichUnit, action)**
 ```
-on - 复活时
-@getTriggerUnit 获取触发单位
+当硬直时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getSourceUnit 获取来源单位
+@ hevent.getValue 获取硬直程度百分比
+@ hevent.getDuring 获取持续时间
 ```
 
-* **onLevelUp**
+* **onDead(whichUnit, action)**
 ```
-on - 提升升等级时
-@getTriggerUnit 获取触发单位
+当死亡时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getKiller 获取凶手单位
 ```
 
-* **onSummon**
+* **onKill(whichUnit, action)**
 ```
-on - 被召唤时
-@getTriggerUnit 获取被召唤单位
+当击杀时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getKiller 获取凶手单位
+@ hevent.getTargetUnit 获取死亡单位
 ```
 
-* **onEnterUnitRange**
+* **onReborn(whichUnit, action)**
 ```
-on - 进入某单位（whichUnit）范围内
-@getTriggerUnit 获取被进入范围的中心单位
-@getTriggerEnterUnit 获取进入范围的单位
-@getRange 获取设定范围
+当复活时[复活时(必须使用 hunit.reborn 方法才能嵌入到事件系统)]
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onEnterRect**
+* **onLevelUp(whichUnit, action)**
 ```
-on - 进入某区域内
-@getTriggerRect 获取被进入的矩形区域
-@getTriggerUnit 获取进入矩形区域的单位
+当提升升等级时
+@ hevent.getTriggerUnit 获取触发单位
+@ hevent.getValue 获取提升了多少级
 ```
 
-* **onLeaveRect**
+* **onSummon(whichUnit, action)**
 ```
-on - 离开某区域内
-@getTriggerRect 获取被离开的矩形区域
-@getTriggerUnit 获取离开矩形区域的单位
+当被召唤时
+@ hevent.getTriggerUnit 获取被召唤单位
 ```
 
-* **onChat**
+* **onEnterUnitRange(whichUnit, range, action)**
 ```
-on - 聊天时（全匹配）
-@getTriggerPlayer 获取聊天的玩家
-@getTriggerString 获取聊天的内容
-@getTriggerStringMatched 获取匹配命中的内容
+当进入某单位（whichUnit）范围内
+@ hevent.getTriggerUnit 获取被进入范围的中心单位
+@ hevent.getTriggerEnterUnit 获取进入范围的单位
+@ hevent.getRange 获取设定范围
 ```
 
-* **onChatLike**
+* **onEnterRect(whichRect, action)**
 ```
-on - 聊天时（模糊匹配）
-@getTriggerPlayer 获取聊天的玩家
-@getTriggerString 获取聊天的内容
-@getTriggerStringMatched 获取匹配命中的内容
+当进入某区域内
+@ hevent.getTriggerRect 获取被进入的矩形区域
+@ hevent.getTriggerUnit 获取进入矩形区域的单位
 ```
 
-* **onEsc**
+* **onLeaveRect(whichRect, action)**
 ```
-on - 按ESC
-@getTriggerPlayer 获取触发玩家
+当离开某区域内
+@ hevent.getTriggerRect 获取被离开的矩形区域
+@ hevent.getTriggerUnit 获取离开矩形区域的单位
 ```
 
-* **onSelection**
+* **onChat(whichPlayer, chatStr, matchAll, action)**
 ```
-on - 玩家单击选择单位
-@getTriggerPlayer 获取触发玩家
-@getTriggerUnit 获取触发单位
+当聊天时
+params matchAll 是否全匹配，false为like
+@ hevent.getTriggerPlayer 获取聊天的玩家
+@ hevent.getTriggerString 获取聊天的内容
+@ hevent.getTriggerStringMatched 获取匹配命中的内容
 ```
 
-* **onSelectionDouble**
+* **onEsc(whichPlayer, action)**
 ```
-on - 玩家双击选择单位
-@getTriggerPlayer 获取触发玩家
-@getTriggerUnit 获取触发单位
+当按ESC
+@ hevent.getTriggerPlayer 获取触发玩家
 ```
 
-* **onSelectionTriple**
+* **onSelection(whichPlayer, qty, action)**
 ```
-on - 玩家三击选择单位
-@getTriggerPlayer 获取触发玩家
-@getTriggerUnit 获取触发单位
+当玩家选择单位
+whichPlayer 为nil时，指所有玩家
+qty 需要点击次数
+@ hevent.getTriggerPlayer 获取触发玩家
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onUnSelection**
+* **onUnSelection(whichPlayer, action)**
 ```
-on - 玩家取消选择单位
-@getTriggerPlayer 获取触发玩家
-@getTriggerUnit 获取触发单位
+当玩家取消选择单位
+@ hevent.getTriggerPlayer 获取触发玩家
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onUpgradeStart**
+* **onUpgradeStart(whichUnit, action)**
 ```
-on - 建筑升级开始时
-@getTriggerUnit 获取触发单位
+当建筑升级开始时
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onUpgradeCancel**
+* **onUpgradeCancel(whichUnit, action)**
 ```
-on - 建筑升级取消时
-@getTriggerUnit 获取触发单位
+当建筑升级取消时
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onUpgradeFinish**
+* **onUpgradeFinish(whichUnit, action)**
 ```
-on - 建筑升级完成时
-@getTriggerUnit 获取触发单位
+当建筑升级完成时
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onConstructStart**
+* **onConstructStart(whichPlayer, action)**
 ```
-on - 任意建筑建造开始时
-@使用默认的 GetTriggerUnit 获取触发单位
+当任意建筑建造开始时
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onConstructCancel**
+* **onConstructCancel(whichPlayer, action)**
 ```
-on - 任意建筑建造取消时
-@使用默认的 GetCancelledStructure 获取触发单位
+当任意建筑建造取消时
+@ hevent.getCancelledStructure 获取触发单位
 ```
 
-* **onConstructFinish**
+* **onConstructFinish(whichPlayer, action)**
 ```
-on - 任意建筑建造完成时
-@使用默认的 GetCancelledStructure 获取触发单位
+当任意建筑建造完成时
+@ hevent.getCancelledStructure 获取触发单位
 ```
 
-* **onRegister**
+* **onRegister(action)**
 ```
-on - 任意单位注册进h-vjass系统时(注意这是全局事件)
-@getTriggerUnit 获取触发单位
+当任意单位注册进h-lua系统时(注意这是全局事件)
+@ hevent.getTriggerUnit 获取触发单位
 ```
 
-* **onPickHero**
+* **onPickHero(action)**
 ```
-on - 任意单位经过hero方法被玩家所挑选为英雄时(注意这是全局事件)
-@getTriggerUnit 获取触发单位
+当任意单位经过hero方法被玩家所挑选为英雄时(注意这是全局事件)
+@ hevent.getTriggerPlayer 获取触发玩家
+@ hevent.getTriggerUnit 获取触发单位
 ```

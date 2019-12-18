@@ -3,90 +3,39 @@ weather
 
 ---
 
-* **天气ID**
-```
-integer hweather_id_sun = 'LRaa' //日光
-integer hweather_id_moon = 'LRma' //月光
-integer hweather_id_shield = 'MEds' //紫光盾
-integer hweather_id_rain = 'RAlr' //雨
-integer hweather_id_rainstorm = 'RAhr' //大雨
-integer hweather_id_snow = 'SNls' //雪
-integer hweather_id_snowstorm = 'SNhs' //大雪
-integer hweather_id_wind = 'WOlw' //风
-integer hweather_id_windstorm = 'WNcw' //大风
-integer hweather_id_mistwhite = 'FDwh' //白雾
-integer hweather_id_mistgreen = 'FDgh' //绿雾
-integer hweather_id_mistblue = 'FDbh' //蓝雾
-integer hweather_id_mistred = 'FDrh' //红雾
+* **vars**
+```lua
+hweather = {
+    --天气ID
+    sun = hSys.getObjId('LRaa'), --日光
+    moon = hSys.getObjId('LRma'), --月光
+    shield = hSys.getObjId('MEds'), --紫光盾
+    rain = hSys.getObjId('RAlr'), --雨
+    rainstorm = hSys.getObjId('RAhr'), --大雨
+    snow = hSys.getObjId('SNls'), --雪
+    snowstorm = hSys.getObjId('SNhs'), --大雪
+    wind = hSys.getObjId('WOlw'), --风
+    windstorm = hSys.getObjId('WNcw'), --大风
+    mistwhite = hSys.getObjId('FDwh'), --白雾
+    mistgreen = hSys.getObjId('FDgh'), --绿雾
+    mistblue = hSys.getObjId('FDbh'), --蓝雾
+    mistred = hSys.getObjId('FDrh'), --红雾
+}
 ```
 
-* **del**
+* **del(w, during)**
 ```
 删除天气
 ```
 
-* **sun**
+* **create(bean)**
 ```
-在区域创建日光天气
-```
-
-* **moon**
-```
-在区域创建月光天气
-```
-
-* **shield**
-```
-在区域创建紫光盾天气
-```
-
-* **rain**
-```
-在区域创建下雨天气
-```
-
-* **rainstorm**
-```
-在区域创建暴雨天气
-```
-
-* **snow**
-```
-在区域创建雪天天气
-```
-
-* **snowstorm**
-```
-在区域创建暴风雪天气
-```
-
-* **wind**
-```
-在区域创建大风天气
-```
-
-* **windstorm**
-```
-在区域创建暴风天气
-```
-
-* **mistwhite**
-```
-在区域创建白雾天气
-```
-
-* **mistgreen**
-```
-在区域创建绿雾天气
-```
-
-* **mistblue**
-```
-在区域创建蓝雾天气
-```
-
-* **mistred**
-```
-在区域创建红雾天气
+创建天气
+options = {
+    x=0,y=0, 坐标
+    w=0,h=0, 长宽
+    type=hweather.sun 天气类型
+    during=10 持续时间小于等于0=无限
+}
 ```
 

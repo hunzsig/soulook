@@ -1,31 +1,31 @@
 effect
 
 > 调用：heffect.method()
-
+> during=0为删除型创建（但是有的模型用删除法不会播放，此时需要during>0）
 ---
 
-* **del**
+* **del(e)**
 ```
 删除特效
 ```
 
-* **toXY**
+* **toXY(effectModel, x, y, during)**
 ```
 创建XY坐标特效
 ```
 
-* **toLoc**
+* **toLoc(effectModel, loc, during)**
 ```
 创建点特效
 ```
 
-* **toUnitLoc**
+* **toUnit(effectModel, targetUnit, during)**
 ```
 创建单位所处点特效
 ```
 
-* **toUnit**
+* **bindUnit(effectModel, targetUnit, attach, during)**
 ```
-创建绑定单位实时位置特效
+创建绑定单位附加点特效
 ```
 
