@@ -4,78 +4,21 @@ dialog
 
 ---
 
-* **break**
+* **create(whichPlayer, options, call)**
 ```
-打断
-! 注意这个方法对中立被动无效
+创建一个新的对话框
+hdialog.create(
+    nil, --指所有玩家
+    {
+        title = "选择游戏模式",
+        buttons = {
+            "模式1",
+            "模式2",
+        }
+    },
+    function(btnIdx)
+        hmsg.echo("选择了" .. btnIdx) --btnIdx等于"模式1"或"模式2"
+        --根据btnIdx做出后续代码
+    end
+)
 ```
-
-* **swim**
-```
-眩晕
-! 注意这个方法对中立被动无效
-```
-
-* **silent**
-```
-沉默
-```
-
-* **unarm**
-```
-缴械
-```
-
-* **avoid**
-```
-回避
-```
-
-* **zeroInvulnerable**
-```
-0秒无敌
-```
-
-* **invulnerable**
-```
-无敌
-```
-
-* **invulnerableGroup**
-```
-群体无敌
-```
-
-* **pause**
-```
-暂停单位
-```
-
-* **addAbilityEffect**
-```
-为单位添加效果只限技能类一段时间
-```
-
-* **diy2loc**
-```
-自定义技能 - 对点
-```
-
-* **diy2once**
-```
-自定义技能 - 立即
-```
-
-* **diy2unit**
-```
-自定义技能 - 对单位
-```
-
-* **diy2unitById**
-```
-自定义技能 - 对单位(命令ID形式)
-```
-
-
-
-
