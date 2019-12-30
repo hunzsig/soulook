@@ -3,6 +3,21 @@ skill
 
 ---
 
+* **add(whichUnit, ability_id, during)**
+```
+为单位添加技能
+```
+
+* **del(whichUnit, ability_id, during)**
+```
+为单位删除技能
+```
+
+* **forever(whichUnit, ability_id)**
+```
+为单位设置技能的永久使用性
+```
+
 * **damage(bean)**
 ```
 造成伤害(没错这是个技能)

@@ -1,7 +1,36 @@
-### 更新日志 <a href="https://gitlab.com/h-w3x/h-lua" target="_blank">#Git</a>
+### 更新日志 <a href="https://github.com/hunzsig-warcraft3/h-lua" target="_blank">#Git</a>
 
+#### 2019/12/29
+    修复一个关于玩家胜利失败的BJbug
+#### 2019/12/25
+    dialog现在支持table的buttons，同时会自动识别设置的key指，可能的话作为热键
+    优化物品，修复自动物品不会触发使用事件的bug
+    优化system的错误提示
+    新增hhero方法：设置英雄当前等级
+#### 2019/12/24
+    修复玩家获取地图区域调用了BJ函数的问题，优化一些拥有持续时间的函数，during可以不填
+    对话框现在支持关联table及序列table
+#### 2019/12/23
+    增强debug(mb方法)
+    his新增判断是否敌军、友军的方法
+#### 2019/12/22
+    修复runtime的参数重名bug，优化item和unit的slk数据获取
+    新增物品的满格、超重事件、属性计算
+#### 2019/12/21
+    htime最重要的两个计时器方法的参数顺序变更，优化nil的编写
+    现在system的print_r归到debug里面去了
+    删除系统默认的空冷却slk
+#### 2019/12/20
+    skills删除了0秒无敌（合并到无敌的方法去了）
+    slk新增一棵树，修复镜头有几率出错的bug
+    修复BJ函数错误，新增小功能
+    新增一波技能的通用方法(添加、删除)
+#### 2019/12/18
+    effect现在只支持>=0（0为删除型特效调用法）
+    修复已知的bug
 #### 2019/12/16
     修了很多bug（sound、event、hero、player等）
+    现在onLevelUp事件支持获取提升了的等级差
     现在onLevelUp事件支持获取提升了的等级差
 #### 2019/12/15
     修复了is库使用了BJ函数导致的bug

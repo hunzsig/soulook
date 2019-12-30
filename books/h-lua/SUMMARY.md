@@ -37,7 +37,6 @@
 * [hero.lua (选)英雄](lib/hero.md)
 * [is.lua 判断](lib/is.md)
 * [item.lua 物品](lib/item.md)
-* [itemMix.lua 物品合成](lib/itemMix.md)
 * [leaderBoard.lua 排行榜](lib/leaderBoard.md)
 * [lightning.lua 闪电链](lib/lightning.md)
 * [logic.lua 算法逻辑](lib/logic.md)

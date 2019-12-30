@@ -28,6 +28,11 @@ system
 克隆table
 ```
 
+* **mergeTable(table1, table2)**
+```
+合并table
+```
+
 * **inArray(val, arr)**
 ```
 在数组内
@@ -36,11 +41,6 @@ system
 * **rmArray(val, arr, qty)**
 ```
 删除数组一次某个值(qty次,默认删除全部)
-```
-
-* **print_r(table)**
-```
-打印对象table
 ```
 
 * **addslashes(str)**

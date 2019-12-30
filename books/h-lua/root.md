@@ -8,7 +8,10 @@
     ├── ui - UI界面
     ├── const - 静态值
     │   ├── attritube - 属性KV
+    │   ├── hero - 英雄KV
     │   ├── hotKey - 热键KV
+    │   ├── itemKey - 物品KV
+    │   ├── unitKey - 单位KV
     │   └── start.lua - 开始准备
     ├── foundation - 基础文件
     │   ├── foundation - 基础文件

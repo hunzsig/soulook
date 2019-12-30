@@ -14,6 +14,11 @@ hero
 获取英雄之前的等级
 ```
 
+* **setCurLevel(u, newLevel, showEffect)**
+```
+设置英雄当前的等级
+```
+
 * **setBuildParams(x, y, distance, per_row, allow_qty)**
 ```
 设定酒馆参数

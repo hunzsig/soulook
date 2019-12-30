@@ -13,3 +13,21 @@ if err then
     return
 end
 ```
+
+* **print_mb(str)**
+```
+对应原生的print方法，此方法可以打印出中文
+打印utf8时转为ansi编码
+!需要开启console为enable
+```
+
+* **print_r(table)**
+```
+打印对象table
+```
+
+* **print_mbr(table)**
+```
+打印对象table
+对应print_r方法，此方法可以打印出中文
+```

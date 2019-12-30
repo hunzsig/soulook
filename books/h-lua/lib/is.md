@@ -164,12 +164,22 @@ is
 
 * **enemy(whichUnit, otherUnit)**
 ```
-是否敌人
+是否敌人单位
 ```
 
 * **ally(whichUnit, otherUnit)**
 ```
-是否友军
+是否友军单位
+```
+
+* **enemyPlayer(whichUnit, otherUnit)**
+```
+是否敌人玩家
+```
+
+* **allyPlayer(whichUnit, otherUnit)**
+```
+是否友军玩家
 ```
 
 * **borderRect(rect, x, y)**
