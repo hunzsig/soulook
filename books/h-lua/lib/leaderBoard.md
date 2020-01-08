@@ -23,3 +23,13 @@ hleaderBoard.create('akey', 1.00, function(bl, i)
 end)
 ```
 
+* **setTitle(whichBoard, title)**
+```
+设置排行榜的标题
+```
+
+* **setPlayerData(whichBoard, whichPlayer, data)**
+```
+设置玩家的数据
+```
+

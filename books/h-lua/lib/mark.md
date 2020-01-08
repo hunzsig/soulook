@@ -4,17 +4,7 @@ mark
 
 ---
 
-* **show(whichPlayer)**
+* **create(path, during, whichPlayer)**
 ```
-显示遮罩滤镜
-```
-
-* **hide(whichPlayer)**
-```
-隐藏遮罩滤镜
-```
-
-* **display(whichPlayer, path, through, startPercent, endPercent, during)**
-```
-展示遮罩滤镜
+创建一个遮罩，png图转blp即可使用
 ```

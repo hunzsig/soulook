@@ -1,13 +1,8 @@
-logic
+math
 
-> 调用：hlogic.method()
+> 调用：math.method() 与原有math完美混合
 
 ---
-
-* **mbStringLen(str)**
-```
-计算字符串宽度(识别字符)
-```
 
 * **polarProjection(x, y, dist, angle)**
 ```

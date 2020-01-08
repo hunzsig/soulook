@@ -19,7 +19,9 @@
 * [foundation.lua 基础库介绍](foundation/foundation.md)
 * [debug.lua json库](foundation/debug.md)
 * [json.lua json库](foundation/json.md)
-* [system.lua 基础库介绍](foundation/system.md)
+* [math.lua math库](foundation/math.md)
+* [string.lua string库](foundation/string.md)
+* [table.lua table库](foundation/table.md)
 * [color.lua 颜色](foundation/color.md)
 
 ## 功能库
@@ -39,10 +41,9 @@
 * [item.lua 物品](lib/item.md)
 * [leaderBoard.lua 排行榜](lib/leaderBoard.md)
 * [lightning.lua 闪电链](lib/lightning.md)
-* [logic.lua 算法逻辑](lib/logic.md)
 * [mark.lua 遮罩滤镜](lib/mark.md)
 * [message.lua 消息体](lib/message.md)
-* [multiboard.lua 多面板](lib/multiboard.md)
+* [multiBoard.lua 多面板](lib/multiBoard.md)
 * [player.lua 玩家](lib/player.md)
 * [rect.lua 区域](lib/rect.md)
 * [skill.lua 技能](lib/skill.md)

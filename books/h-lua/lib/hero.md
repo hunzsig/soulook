@@ -14,6 +14,11 @@ hero
 获取英雄之前的等级
 ```
 
+* **getCurLevel(u)**
+```
+获取英雄当前等级
+```
+
 * **setCurLevel(u, newLevel, showEffect)**
 ```
 设置英雄当前的等级

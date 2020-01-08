@@ -29,6 +29,11 @@ group
 把单位移出单位组
 ```
 
+* **createByXY(x, y, radius, filterFunc)**
+```
+以(x,y)点为中心radius距离创建单位组
+```
+
 * **createByLoc(loc, radius, filterFunc)**
 ```
 以loc点为中心radius距离创建单位组

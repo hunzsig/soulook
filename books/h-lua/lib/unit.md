@@ -118,6 +118,7 @@ bean = {
    isUnSelectable = false, --是否可鼠标选中，可选
    isPause = false, -- 是否暂停
    isInvulnerable = false, --是否无敌，可选
+   isShareSight = false, --是否与所有玩家共享视野，可选
 }
 @return 最后创建单位/单位组
 ```
@@ -145,6 +146,11 @@ bean = {
 * **getAttackRange(u)**
 ```
 获取单位的攻击范围
+```
+
+* **getName(u)**
+```
+获取单位的名称
 ```
 
 * **getUserData(u)**
