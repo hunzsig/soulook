@@ -216,16 +216,16 @@ local move = hattr.get(u,"move")
 重置注册
 ```
 
-* **huntUnit(bean)**
+* **huntUnit(options)**
 ```
 伤害一个单位
-bean.effect 伤害特效
-bean.huntKind伤害方式:
+options.effect 伤害特效
+options.damageKind伤害方式:
         attack 攻击
         skill 技能
         item 物品
         special 特殊（如眩晕、打断、分裂、爆炸、闪电链之类的）
-bean.huntType伤害类型:
+options.damageType伤害类型:
         physical 物理伤害则无视护甲<享受物理暴击加成，受护甲影响>
         magic 魔法<享受魔法暴击加成，受魔抗影响>
         real 真实<无视回避>
@@ -243,14 +243,14 @@ bean.huntType伤害类型:
         ghost   鬼
         metal   金
         dragon  龙
-bean.breakArmorType 无视的类型：{ 'defend', 'resistance', 'avoid' }
+options.breakArmorType 无视的类型：{ 'defend', 'resistance', 'avoid' }
         沉默时，爆炸、闪电链、击飞会失效，其他不受影响
 hattr.huntUnit({
     damage = 100,
-    fromUnit = source,
-    toUnit = targer,
-    huntKind = "attack",
-    huntType = "fire"
+    sourceUnit = source,
+    targetUnit = targer,
+    damageKind = "attack",
+    damageType = {"fire"}
 })
 ```
 

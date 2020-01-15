@@ -4,7 +4,6 @@
 * [README](README.md)
 * [为什么会有h-lua?](introduction.md)
 * [更新日志](changeLog.md)
-* [目录文件说明](root.md)
 * [使用前注意事项](alert.md)
 * [常见崩溃原因](break.md)
 

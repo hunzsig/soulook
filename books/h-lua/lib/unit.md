@@ -163,6 +163,13 @@ bean = {
 设置单位自定义值
 ```
 
+* **setColor(u,color)**
+```
+设置单位颜色,color可设置玩家索引[1-16],应用其对应的颜色
+又或者直接设置CONST_PLAYER_COLOR额key，如"RED"
+setColor(u,1) 等同于 setColor(u,"red") 等同于 setColor(u,"RED")
+```
+
 * **getFacing(u)**
 ```
 获取单位面向角度

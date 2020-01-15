@@ -54,6 +54,11 @@ group
 瞬间移动单位组
 ```
 
+* **getClosest(whichGroup, x, y)**
+```
+获取单位组内离选定的(x,y)最近的单位
+```
+
 * **animate(whichGroup, animateStr)**
 ```
 指挥单位组所有单位做动作(动画)
