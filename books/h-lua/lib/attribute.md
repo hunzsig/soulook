@@ -11,7 +11,7 @@ mana / 最大魔法
 move / 移动力
 defend  / 护甲
 attack_speed / 攻击速度
-attack_hunt_type / 攻击伤害类型
+attack_damage_type / 攻击伤害类型
 attack_white / 白字攻击
 attack_green / 绿字攻击
 attack_range / 攻击范围（未实现）
@@ -51,15 +51,15 @@ luck / 幸运(%)
 invincible / 无敌(%)
 weight / 负重
 weight_current / 当前负重
-hunt_amplitude / 伤害附加(%)
-hunt_rebound / 反伤(%)
+damage_amplitude / 伤害附加(%)
+damage_rebound / 反伤(%)
+damage_rebound_oppose / 反伤抵抗(%)
 cure / 治疗效果
 knocking_oppose / 物暴抵抗(%)
 violence_oppose / 魔暴抵抗(%)
 hemophagia_oppose / 吸血抵抗(%)
 split_oppose / 分裂抵抗(%)
 punish_oppose / 硬直抵抗(%)
-hunt_rebound_oppose / 反伤抵抗(%)
 swim_oppose / 眩晕抵抗(%)
 silent_oppose / 沉默抵抗(%)
 unarm_oppose / 缴械抵抗(%)
@@ -214,44 +214,6 @@ local move = hattr.get(u,"move")
 * **reRegister(whichUnit)**
 ```
 重置注册
-```
-
-* **huntUnit(options)**
-```
-伤害一个单位
-options.effect 伤害特效
-options.damageKind伤害方式:
-        attack 攻击
-        skill 技能
-        item 物品
-        special 特殊（如眩晕、打断、分裂、爆炸、闪电链之类的）
-options.damageType伤害类型:
-        physical 物理伤害则无视护甲<享受物理暴击加成，受护甲影响>
-        magic 魔法<享受魔法暴击加成，受魔抗影响>
-        real 真实<无视回避>
-        absolute 绝对(无视回避、无视无敌)
-        fire    火
-        soil    土
-        water   水
-        ice     冰
-        wind    风
-        light   光
-        dark    暗
-        wood    木
-        thunder 雷
-        poison  毒
-        ghost   鬼
-        metal   金
-        dragon  龙
-options.breakArmorType 无视的类型：{ 'defend', 'resistance', 'avoid' }
-        沉默时，爆炸、闪电链、击飞会失效，其他不受影响
-hattr.huntUnit({
-    damage = 100,
-    sourceUnit = source,
-    targetUnit = targer,
-    damageKind = "attack",
-    damageType = {"fire"}
-})
 ```
 
 

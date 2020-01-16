@@ -2,6 +2,8 @@
 
 > 注意这里只列出部分较重要的更新
 
+#### 2020/01/16
+    功能 | - 属性系统的伤害动作全部与skill的合并，现在只需要使用hskill.damage,而hattr.huntUnit则被删除
 #### 2020/01/15
     功能 | - 新增leap拓展技能leapRange
     功能 | - 新增技能：隐身/现形，优化hskill及hattr

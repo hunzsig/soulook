@@ -25,6 +25,11 @@ dzapi
 是否有商城道具
 ```
 
+* **setRoomStat(whichPlayer, key, text)**
+```
+设置房间数据
+```
+
 * **server.save(whichPlayer, key, data)**
 ```
 野生的服务器存档(不帮你加前缀)

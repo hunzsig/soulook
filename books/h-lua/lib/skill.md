@@ -61,18 +61,19 @@ transition是过渡时间，0就是瞬间隐身,默认0
 为单位添加效果只限技能类(一般使用物品技能<攻击之爪>模拟)一段时间
 ```
 
-* **damage(bean)**
+* **damage(options)**
 ```
 造成伤害(没错这是个技能)
-bean = {
+options = {
     sourceUnit = nil, --伤害来源
     targetUnit = nil, --目标单位
-    damage = 0, --初始伤害
-    damageString = "", --伤害漂浮字前缀字串
+    damage = 0, --实际伤害
+    damageString = "", --伤害漂浮字颜色
     damageStringColor = "", --伤害漂浮字颜色
-    damageKind = "attack", --伤害种类 attack | skill | special
-    damageType = { "magic", "thunder" }, --伤害类型 physical | magic 等
-    effect = "", --伤害特效
+    effect = nil, --伤害特效
+    damageKind = "attack", --伤害种类请查看 CONST_DAMAGE_KIND
+    damageType = { "magic", "thunder" }, --伤害类型请查看 CONST_DAMAGE_TYPE
+    breakArmorType 无视的类型：{ 'defend', 'resistance', 'avoid' } --破防类型请查看 CONST_BREAK_ARMOR_TYPE
 }
 ```
 
