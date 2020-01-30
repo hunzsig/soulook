@@ -3,3 +3,4 @@ node_modules/
 dist/
 h-react-library/
 src/book
+src/pages/Home/information.json

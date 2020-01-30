@@ -105,13 +105,12 @@ $color-copyright: #ffe045;
     li {
       list-style: none;
       position: relative;
-      padding: 0.4rem 0 0.3rem 6%;
+      padding: 0.3rem 0 0.06rem 6%;
       margin: 0 0 .5em 10px;
       -webkit-transition: .12s;
       transition: .12s;
       cursor: default;
       color: $color-li;
-      border-bottom: 1px solid $color-hr;
     }
 
     li::before {

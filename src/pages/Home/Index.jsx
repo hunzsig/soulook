@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Layout, Row, Col, Menu, Button, Icon} from 'antd';
-import {withRouter} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Layout, Row, Col, Menu, Button, Icon } from 'antd';
+import { withRouter } from 'react-router-dom';
 import Cookie from '../../Cookie';
 import hRouter from '../../hRouter';
 import Loadable from 'react-loadable';
@@ -9,8 +9,16 @@ import HRouterLoading from './../../hRouterLoading';
 import './Layout.scss';
 import './Index.scss';
 
-const {Content} = Layout;
+const { Content } = Layout;
 const pageCache = {};
+
+let Information = require('./information.example.json');
+try {
+  const temp = require('./information.json')
+  Information = temp
+} catch (e) {
+  alert("请自行准备information.json用以覆盖书籍下方的个人信息，现暂时使用example信息，实在搞不懂联系qq854588403")
+}
 
 class Index extends Component {
   static propTypes = {};
@@ -214,7 +222,7 @@ class Index extends Component {
               {this.renderSub(this.children)}
             </Menu>
           </Col>
-          <Col style={{flex: 1}}>
+          <Col style={{ flex: 1 }}>
             <div className="conContainer">
               <Button.Group className="menu-btns">
                 <Button
@@ -224,7 +232,7 @@ class Index extends Component {
                   onClick={() => {
                     Cookie.set('layout-collapsed', this.state.collapsed !== true);
                     this.state.collapsed = this.state.collapsed !== true;
-                    if(this.state.collapsed){
+                    if (this.state.collapsed) {
                       this.prevOpen = JSON.parse(JSON.stringify(this.state.open || []));
                     }
                     this.setState({
@@ -258,11 +266,11 @@ class Index extends Component {
                     ? React.createElement(Loadable({
                       loader: () => import('./IndexLight'),
                       loading: HRouterLoading
-                    }), {book: book})
+                    }), { book: book })
                     : React.createElement(Loadable({
                       loader: () => import('./IndexDark'),
                       loading: HRouterLoading
-                    }), {book: book})
+                    }), { book: book })
                 }
                 <div className="page-trans">
                   <Icon
@@ -283,17 +291,20 @@ class Index extends Component {
                 </div>
               </Content>
               <div className="footer">
-                <div className="line"/>
+                <div className="line" />
                 <Row className="copyright">
-                  <Col xxs={24} xs={24} s={8} m={8} l={8} xl={8}>
-                    <span>魂之似光技术联系QQ：854588403</span>
+                  <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
+                    <span>{Information.qq}</span>
                   </Col>
-                  <Col xxs={24} xs={24} s={8} m={8} l={8} xl={8}>
-                    <span>© Copyright 2015-{(new Date().getFullYear())} All rights reserved.</span>
+                  <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
+                    <span>© 2015-{(new Date().getFullYear())} {Information.copyright} 版权所有</span>
                   </Col>
-                  <Col xxs={24} xs={24} s={8} m={8} l={8} xl={8}>
-                    <a href="https://github.com/hunzsig/soulook" target="_blank" className={this.state.theme}><Icon
-                      type="gitlab"/>&emsp;魂 书 制 作</a>
+                  <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
+                    <a href={Information.site.url} target="_blank" className={this.state.theme}><Icon
+                      type="github" />&emsp;{Information.site.name}</a>
+                  </Col>
+                  <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
+                    <a href={Information.beian.url} target="_blank" className={this.state.theme}>ICP证：{Information.beian.name}</a>
                   </Col>
                 </Row>
               </div>
