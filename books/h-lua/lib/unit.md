@@ -88,6 +88,11 @@ unit
 获取单位是否启用硬直（系统默认不启用）
 ```
 
+* **setAnimateSpeed(u, speed, during)**
+```
+设置单位的动画速度[比例尺1.00]
+```
+
 * **create(bean)**
 ```
 创建单位/单位组

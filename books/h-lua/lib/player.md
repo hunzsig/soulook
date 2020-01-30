@@ -270,9 +270,10 @@ hplayer = {
 设置玩家金钱
 ```
 
-* **addGold(whichPlayer, gold)**
+* **addGold(whichPlayer, gold, u)**
 ```
-增加玩家金钱
+增加玩家金钱（自动结合加成）
+如果设置了u，则会在该单位处展示漂浮字
 ```
 
 * **subGold(whichPlayer, gold)**
@@ -290,9 +291,10 @@ hplayer = {
 设置玩家木头
 ```
 
-* **addLumber(whichPlayer, lumber)**
+* **addLumber(whichPlayer, lumber, u)**
 ```
-增加玩家木头
+增加玩家木头（自动结合加成）
+如果设置了u，则会在该单位处展示漂浮字
 ```
 
 * **subLumber(whichPlayer, lumber)**

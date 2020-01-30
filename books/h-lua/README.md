@@ -1,7 +1,7 @@
  * [github网址](https://github.com/hunzsig-warcraft3/h-lua)
  * [最佳实践：暂未公开](https://github.com/hunzsig/w3x-my-tower)
  * author hunzsig
- * version 20200116
+ * version 20200130
 
 # 使用优势？
 h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依赖任何游戏平台（如JAPI、DzAPI）

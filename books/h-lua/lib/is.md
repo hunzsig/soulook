@@ -127,6 +127,11 @@ is
 是否古树
 ```
 
+* **locust(whichUnit)**
+```
+是否蝗虫
+```
+
 * **punish(whichUnit)**
 ```
 是否被硬直

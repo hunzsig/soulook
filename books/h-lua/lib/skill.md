@@ -61,6 +61,21 @@ transition是过渡时间，0就是瞬间隐身,默认0
 为单位添加效果只限技能类(一般使用物品技能<攻击之爪>模拟)一段时间
 ```
 
+* **diy(options)**
+```
+自定义技能 - 对单位/对XY/对点
+options = {
+    whichPlayer,
+    skillId,
+    orderString,
+    x,y 创建位置
+    targetX,targetY 对XY时可选
+    targetLoc, 对点时可选
+    targetUnit, 对单位时可选
+    life, 马甲生命周期
+}
+```
+
 * **damage(options)**
 ```
 造成伤害(没错这是个技能)
@@ -74,6 +89,44 @@ options = {
     damageKind = "attack", --伤害种类请查看 CONST_DAMAGE_KIND
     damageType = { "magic", "thunder" }, --伤害类型请查看 CONST_DAMAGE_TYPE
     breakArmorType 无视的类型：{ 'defend', 'resistance', 'avoid' } --破防类型请查看 CONST_BREAK_ARMOR_TYPE
+}
+```
+
+* **damageRange(options)**
+```
+范围持续伤害
+options = {
+    range = 0, --范围（必须有）
+    frequency = 0, --伤害频率（必须有）
+    times = 0, --伤害次数（必须有）
+    effect = "", --特效（可选）
+    effectSingle = "", --单体特效（可选）
+    filter = [function], --必须有
+    whichUnit = [unit], --中心单位的位置（可选）
+    whichLoc = [location], --目标点（可选）
+    x = [point], --目标坐标X（可选）
+    y = [point], --目标坐标Y（可选）
+    damage = 0, --伤害（可选，但是这里可以等于0）
+    sourceUnit = [unit], --伤害来源单位（damage>0时，必须有）
+    damageKind = CONST_DAMAGE_KIND.skill --伤害的种类（可选）
+    damageType = {CONST_DAMAGE_TYPE.real} --伤害的类型,注意是table（可选）
+    extraInfluence = [function],
+}
+```
+
+* **damageGroup(options)**
+```
+单位组持续伤害
+options = {
+    frequency = 0, --伤害频率（必须有）
+    times = 0, --伤害次数（必须有）
+    effect = "", --伤害特效（可选）
+    whichGroup = [group], --单位组（必须有）
+    damage = 0, --伤害（可选，但是这里可以等于0）
+    sourceUnit = [unit], --伤害来源单位（damage>0时，必须有）
+    damageKind = CONST_DAMAGE_KIND.skill, --伤害的种类（可选）
+    damageType = {CONST_DAMAGE_TYPE.real}, --伤害的类型,注意是table（可选）
+    extraInfluence = [function],
 }
 ```
 
@@ -322,24 +375,43 @@ options = {
 }
 ```
 
+* **leapReflex(options)**
+```
+反射弹跳
+options = {
+    qty = 1, --（跳跃次数，默认1）
+    range = 0, --（选目标范围，默认0无效）
+    hskill.leap.options
+}
+```
+
+* **rectangleStrike(options)**
+```
+矩形打击
+options = {
+    damage = 0, --伤害（必须有，默认0无效）
+    sourceUnit, --伤害来源（必须有！不管有没有伤害）
+    x, --初始的x坐标（必须有，对点冲击，从该处开始打击）
+    y, --初始的y坐标（必须有，对点冲击，从该处开始打击）
+    deg, --方向（必须有）
+    range = 0, --打击范围（必须有，默认为0无效）
+    distance = 0, --打击距离（必须有，默认为0无效）
+    frequency = 0, --打击频率（必须有，默认0瞬间打击全部形状）
+    filter = [function], --必须有
+    effect = nil, --打击特效
+    effectScale = 1.30, --打击特效缩放
+    effectOffset = 0, --打击特效偏移量（distance+offset才是展示特效距离）
+    damageKind = CONST_DAMAGE_KIND.skill, --伤害的种类（可选）
+    damageType = {} --伤害的类型,注意是table（可选）
+    damageEffect = nil, --伤害特效（可选）
+    oneHitOnly = true, --是否每个敌人只打击一次（可选,默认true）
+    extraInfluence = [function] --对击中的敌人的额外影响，会回调该敌人单位，可以对其做出自定义行为
+}
+```
+
 * **shapeshift(u, during, modelFrom, modelTo, eff, attrData)**
 ```
 变身[参考 h-lua变身技能模板]
 !modelFrom 技能模板 参考 h-lua SLK
 !modelTo 技能模板 参考 h-lua SLK
-```
-
-* **diy(options)**
-```
-自定义技能 - 对单位/对XY/对点
-options = {
-    whichPlayer,
-    skillId,
-    orderString,
-    x,y 创建位置
-    targetX,targetY 对XY时可选
-    targetLoc, 对点时可选
-    targetUnit, 对单位时可选
-    life, 马甲生命周期
-}
 ```

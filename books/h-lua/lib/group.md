@@ -4,6 +4,11 @@ group
 
 ---
 
+* **loop(whichGroup, actions, autoDel)**
+```
+循环group
+```
+
 * **count(whichGroup)**
 ```
 统计单位组当前单位数

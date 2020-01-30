@@ -9,6 +9,7 @@
 
 ## 系统介绍
 
+* [常量规划](const.md)
 * [属性系统](attr.md)
 * [物品系统](item.md)
 * [单位XY坐标教程](xy.md)
@@ -16,12 +17,12 @@
 
 ## 基础库
 * [foundation.lua 基础库介绍](foundation/foundation.md)
+* [color.lua 颜色](foundation/color.md)
 * [debug.lua json库](foundation/debug.md)
 * [json.lua json库](foundation/json.md)
 * [math.lua math库](foundation/math.md)
 * [string.lua string库](foundation/string.md)
 * [table.lua table库](foundation/table.md)
-* [color.lua 颜色](foundation/color.md)
 
 ## 功能库
 
