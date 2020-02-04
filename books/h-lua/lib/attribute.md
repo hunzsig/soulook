@@ -1,6 +1,9 @@
 attribute
 
 > 调用：hattr.method() or hattribute.method()
+> 虽然属性系统已经有着极致的性能优化，常规使用毫无问题。
+> 但如果瞬间调用过多会引起小卡顿，这是您需要注意规划的事
+> tips: 你可以尝试使用htime分离瞬间或考虑属性的合并设置及优化你的地图流程
 
 ---
 
@@ -23,11 +26,7 @@ str_white / 白字力量
 agi_white / 白字敏捷
 int_white / 白字智力
 life_back / 生命恢复
-life_source / 生命源
-life_source_current / 当前生命源
 mana_back / 魔法恢复
-mana_source / 魔法源
-mana_source_current / 当前魔法源 
 resistance / 魔抗(%)
 toughness / 减伤
 avoid / 回避(%)

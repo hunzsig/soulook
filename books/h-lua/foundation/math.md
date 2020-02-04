@@ -9,18 +9,6 @@ math
 极坐标位移
 ```
 
-* **oddsItem(odds_stable, odds_gain, timers)**
-```
-获取物品几率叠加几率
-根据固定因子及增益因子计算几率因子
-return odds_stable + odds_stable * ((timers - 1) * odds_gain)
-```
-
-* **coverAttrEffectVal(value1, value2)**
-```
-计算属性特效效果叠加
-```
-
 * **round(decimal)**
 ```
 四舍五入

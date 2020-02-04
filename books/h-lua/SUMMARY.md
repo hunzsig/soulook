@@ -45,6 +45,7 @@
 * [message.lua 消息体](lib/message.md)
 * [multiBoard.lua 多面板](lib/multiBoard.md)
 * [player.lua 玩家](lib/player.md)
+* [quest.lua 任务](lib/quest.md)
 * [rect.lua 区域](lib/rect.md)
 * [skill.lua 技能](lib/skill.md)
 * [sound.lua 声音](lib/sound.md)

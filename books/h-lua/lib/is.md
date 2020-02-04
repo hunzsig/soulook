@@ -77,6 +77,11 @@ is
 是否无敌
 ```
 
+* **invisible(whichUnit)**
+```
+是否隐身中
+```
+
 * **hero(whichUnit)**
 ```
 是否英雄

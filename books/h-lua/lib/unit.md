@@ -88,10 +88,16 @@ unit
 获取单位是否启用硬直（系统默认不启用）
 ```
 
+* **setInvulnerable(u, flag)**
+```
+设置单位无敌
+```
+
 * **setAnimateSpeed(u, speed, during)**
 ```
 设置单位的动画速度[比例尺1.00]
 ```
+
 
 * **create(bean)**
 ```

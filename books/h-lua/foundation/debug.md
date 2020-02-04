@@ -4,6 +4,18 @@ debug
 
 ---
 
+* **rem(key1, key2)**
+```
+记录运行时间rem方法
+只有key1时为记录，有key2时会打印对应记录间的差值，如：
+rem("a") --1
+rem("b") --2
+rem("c") --4
+print rem("a","b") =1
+print rem("b","c") =2
+print rem("a","c") =3
+```
+
 * **print_stack(...)**
 ```
 结合YDWE的console命令台，你可以查看stack
@@ -21,7 +33,12 @@ end
 !需要开启console为enable
 ```
 
-* **print_r(table)**
+* **print_err(str)**
+```
+错误打印
+```
+
+* **print_r(t, printMethod, showDetail)**
 ```
 打印对象table
 ```

@@ -409,9 +409,17 @@ options = {
 }
 ```
 
-* **shapeshift(u, during, modelFrom, modelTo, eff, attrData)**
+* **shapeshift(options)**
 ```
-变身[参考 h-lua变身技能模板]
-!modelFrom 技能模板 参考 h-lua SLK
-!modelTo 技能模板 参考 h-lua SLK
+变身
+options = {
+    whichUnit, --哪个单位
+    during, --持续时间
+    toUnitId, --目标单位ID(可选)
+    toAbilityId, --目标替换技能ID(可选,与toUnitId互斥)
+    backAbilityId, --返回时的替换技能ID(可选,与toUnitId互斥)
+    effectStart = nil, --开始中心特效
+    effectEnd = nil, --结束中心特效
+    attr = {} --属性变动
+}
 ```
