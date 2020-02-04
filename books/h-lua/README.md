@@ -82,18 +82,20 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
 
 > 以下教程以YDWE为例
 ## 前期准备：
-### 打开YWDE【设置】的lua引擎 
-### 关闭YWDE的 逆天触发
+### 打开 YWDE【设置】的lua引擎 
+### 关闭 YWDE的 逆天触发
 > 会使得某些原生方法胡乱添加YDWE前缀
 
 ## 好了，让我们开始接入：
-### 打开YDWE 打开地图按F4打开触发编辑器
+### 打开 YDWE 打开地图按F4打开触发编辑器
 ### 在最上方第一的位置添加一个【新触发】
 ### 选中新建的触发点击菜单【编辑】将他转为自定义文本，替换成你的代码，如下：
 ```
 <?
+#include "[YOUR PATH]/h-lua/slk/helper.lua"
+#include "[YOUR PATH]/h-lua/slk/data.lua"
+#include "[YOUR PATH]/h-lua/slk/init.jass"
 import("main.lua") ("main.lua", true)
-#include "[YOUR PATH]/h-lua/slk.lua"
 ?>
 ```
 > （不建议路径存在有中文）
