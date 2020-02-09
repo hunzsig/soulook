@@ -5,15 +5,15 @@ debug
 ---
 
 * **rem(key1, key2)**
-```
+```lua
 记录运行时间rem方法
 只有key1时为记录，有key2时会打印对应记录间的差值，如：
 rem("a") --1
 rem("b") --2
 rem("c") --4
-print rem("a","b") =1
-print rem("b","c") =2
-print rem("a","c") =3
+rem("a","b") --print 1
+rem("b","c") --print 2
+rem("a","c") --print 3
 ```
 
 * **print_stack(...)**

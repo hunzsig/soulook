@@ -40,6 +40,11 @@ TYPE = {
 获取物品ID字符串
 ```
 
+* **getName(it)**
+```
+获取物品名称
+```
+
 * **getSlk(itOrId)**
 ```
 获取(物品or物品ID)SLK数据集

@@ -18,9 +18,14 @@ string
 获取字符串真实长度
 ```
 
-* **md5(arr)**
+* **md5(object)**
 ```
 生成MD5，支持string和table
+```
+
+* **vkey(object)**
+```
+根据val生成一个key，支持string和table
 ```
 
 * **addslashes(str)**

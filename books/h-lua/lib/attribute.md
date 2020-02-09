@@ -127,11 +127,6 @@ high / 高度
 为单位注册属性系统所需要的基础技能
 ```
 
-* **resetSkill(whichUnit)**
-```
-单位重置注册所有属性技能（一般不使用）
-```
-
 * **set(whichUnit, during, data)**
 ```
 设置单位永久,攻击附加魔法属性，生命等于100
@@ -209,12 +204,6 @@ crack_fly：击飞
 获取单位某属性
 local move = hattr.get(u,"move")
 ```
-
-* **reRegister(whichUnit)**
-```
-重置注册
-```
-
 
 
 
