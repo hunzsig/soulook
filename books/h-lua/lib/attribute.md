@@ -31,18 +31,12 @@ resistance / 魔抗(%)
 toughness / 减伤
 avoid / 回避(%)
 aim / 命中(%)
-knocking_odd / 物理暴击几率(%)
-violence_odd / 魔法暴击几率(%)
-knocking / 物理暴击百分比(%)
-violence / 魔法暴击百分比(%)
 punish / 最大硬直
 punish_current / 当前硬直
 meditative / 冥想力（无实际意义项，你可以用来实现个性效果）
 help / 救助力
 hemophagia / 吸血(%)
 hemophagia_skill / 技能吸血(%)
-split / 分裂(%)
-split_range / 分裂范围 
 gold_ratio / 黄金获得率(%)
 lumber_ratio / 木头获得率(%)
 exp_ratio / 经验获得率(%)
@@ -80,6 +74,7 @@ ghost / 鬼攻击
 metal / 金攻击
 dragon / 龙攻击
 insect / 虫攻击
+god / 神攻击
 fire_oppose / 火抵抗
 soil_oppose / 土抵抗
 water_oppose / 水抵抗
@@ -94,15 +89,19 @@ ghost_oppose / 鬼抵抗
 metal_oppose / 金抵抗
 dragon_oppose / 龙抵抗
 insect_oppose / 虫抵抗
+god_oppose / 神抵抗
 attack_buff / 攻击增益
 attack_debuff / 负面攻击
 skill_buff / 技能增益
 skill_debuff / 负面技能
 attack_effect / 攻击特效
 skill_effect / 技能特效
+knocking / 物理暴击
+violence / 魔法暴击
+split / 分裂 
 swim / 眩晕
-broken / 眩晕
-silent / 眩晕
+broken / 打断
+silent / 沉默
 unarm / 缴械
 fetter / 缚足
 bomb / 爆破
@@ -188,14 +187,17 @@ hattr.set(u,0,{
     }
 })
 对应的effect有
-swim：眩晕
-broken：打断
-silent：眩晕
-unarm：缴械
-fetter：缚足
-bomb：爆破
-lightning_chain：闪电链
-crack_fly：击飞
+knocking 物理暴击
+violence 魔法暴击
+split 分裂 
+swim 眩晕
+broken 打断
+silent 沉默
+unarm 缴械
+fetter 缚足
+bomb 爆破
+lightning_chain 闪电链
+crack_fly 击飞
 如果想要更好的运用这么神奇的属性设置，加群询问作者能否实现或自己查看源码也是个不错的选择哦！
 ```
 
