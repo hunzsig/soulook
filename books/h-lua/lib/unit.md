@@ -103,6 +103,7 @@ unit
 ```
 创建单位/单位组
 bean = {
+   register = true, --是否注册进系统
    whichPlayer = nil, --归属玩家
    unitId = nil, --类型id,如'H001'
    x = nil, --创建坐标X，可选

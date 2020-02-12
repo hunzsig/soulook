@@ -77,6 +77,11 @@ hplayer = {
 在所有玩家里获取一个随机的英雄
 ```
 
+* **hideUnit(whichPlayer)**
+```
+令玩家单位全部隐藏
+```
+
 * **clearUnit(whichPlayer)**
 ```
 令玩家单位全部删除

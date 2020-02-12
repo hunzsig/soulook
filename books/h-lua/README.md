@@ -1,7 +1,8 @@
  * [github网址](https://github.com/hunzsig-warcraft3/h-lua)
  * [最佳实践：暂未公开](https://github.com/hunzsig/w3x-my-tower)
+ * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.02.09
+ * version 2020.02.12
  * QQ 325338043
 
 # 使用优势？
@@ -75,7 +76,7 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
     └── slk - SLK物编生成数据
         ├── data.lua - 需要在触发编辑器加载的文件，slk数据
         ├── helper.lua - 可选在触发编辑器加载的文件，slk生成帮助函数
-        └── init.jass - 需要在触发编辑器加载的文件，用于初始化
+        └── init.jass - 需要在触发编辑器加载的文件，用于初始化及调用lua-exec
 ```
 
 提醒：
@@ -99,12 +100,6 @@ import("main.lua") ("main.lua", true)
 ?>
 ```
 > （不建议路径存在有中文）
-
-### 再新建一个触发器，事件为【地图初始化】
-```
-动作为：[游戏] - 输入作弊码：exec-lua: "main"
- * 不同的编辑器翻译可以有微弱的差异，请自行判断
-```
 
 > 注意：
 h-lua库开源，不定时更新，可访问 http://hlua.book.hunzsig.org 查看最新文档
