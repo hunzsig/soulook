@@ -36,3 +36,18 @@ hleaderBoard.create(
 设置排行榜的标题
 ```
 
+* **pos(whichBoard, n)**
+```
+获取排行第N的玩家
+```
+
+* **top(whichBoard)**
+```
+获取排行第一的玩家
+```
+
+* **bottom(whichBoard)**
+```
+获取排行最后的玩家
+```
+

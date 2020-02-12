@@ -125,6 +125,7 @@ bean = {
    attackY = nil, --攻击Y，可选
    attackLoc = nil, --攻击点，可选
    attackUnit = nil, --攻击单位，可选
+   isOpenSolt = false, --是否开启物品栏(自动注册)，可选
    isOpenPunish = false, --是否开启硬直系统，可选
    isShadow = false, --是否影子，可选
    isUnSelectable = false, --是否可鼠标选中，可选

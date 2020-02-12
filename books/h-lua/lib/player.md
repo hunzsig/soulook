@@ -57,6 +57,16 @@ hplayer = {
 获取玩家ID，例如：玩家一等于1，玩家三等于3
 ```
 
+* **getName(whichPlayer)**
+```
+获取玩家名称
+```
+
+* **setName(whichPlayer, name)**
+```
+设置玩家名称
+```
+
 * **getSelection(whichPlayer)**
 ```
 获取玩家当前勾选的单位
