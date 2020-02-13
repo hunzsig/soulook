@@ -147,16 +147,6 @@ hplayer = {
 增加玩家杀敌数
 ```
 
-* **getLifeSourceRatio(whichPlayer)**
-```
-获取玩家生命源设定百分比
-```
-
-* **getManaSourceRatio(whichPlayer)**
-```
-获取玩家魔法源设定百分比
-```
-
 * **setGoldRatio(whichPlayer, val, during)**
 ```
 设置玩家黄金收获比
