@@ -72,6 +72,11 @@ is
 是否生存
 ```
 
+* **deleted(whichUnit)**
+```
+是否已被删除
+```
+
 * **invincible(whichUnit)**
 ```
 是否无敌
@@ -155,6 +160,11 @@ is
 * **crackFly(whichUnit)**
 ```
 是否被击飞
+```
+
+* **damaging(whichUnit)**
+```
+是否正在受伤
 ```
 
 * **water(whichUnit)**

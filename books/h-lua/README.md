@@ -2,7 +2,7 @@
  * [最佳实践：暂未公开](https://github.com/hunzsig/w3x-my-tower)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.02.12
+ * version 2020.02.13
  * QQ 325338043
 
 # 使用优势？
