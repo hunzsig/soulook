@@ -619,6 +619,12 @@ evtData.triggerPlayer 获取触发玩家
 evtData.triggerUnit 获取触发单位
 ```
 
+* **onPlayerLeave(action)**
+```
+玩家离开游戏事件(注意这是全局事件)
+evtData.triggerPlayer 获取触发玩家
+```
+
 * **onUpgradeStart(whichUnit, action)**
 ```
 当建筑升级开始时
