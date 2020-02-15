@@ -2,18 +2,19 @@
 ## 有趣的h-lua
 
 * [README](README.md)
-* [为什么会有h-lua?](introduction.md)
+* [为什么会有h-lua?](description/introduction.md)
 * [更新日志](changeLog.md)
-* [使用前注意事项](alert.md)
-* [常见崩溃原因](break.md)
+* [使用前注意事项](description/alert.md)
+* [常见崩溃原因](description/break.md)
+* [上线官方平台须知](description/dist.md)
 
 ## 系统介绍
 
-* [常量规划](const.md)
-* [属性系统](attr.md)
-* [物品系统](item.md)
-* [单位XY坐标教程](xy.md)
-* [加载BGM教程](roomMusic.md)
+* [常量规划](description/const.md)
+* [属性系统](description/attr.md)
+* [物品系统](description/item.md)
+* [单位XY坐标教程](description/xy.md)
+* [加载BGM教程](description/roomMusic.md)
 
 ## 基础库
 * [foundation.lua 基础库介绍](foundation/foundation.md)
