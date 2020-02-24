@@ -26,8 +26,8 @@ hdialog.create( --创建一个新的对话框2，且A、B作为热键
     {
         title = "选择游戏模式",
         buttons = {
-            A = "模式1",
-            B = "模式2",
+            {value="A", label="模式1"},
+            {value="B", label="模式2"},
         }
     },
     function(btnIdx)

@@ -23,7 +23,10 @@ hleaderBoard.create(
         local data = {}
         hplayer.loop(
             function(p, pi)
-                data[pi] = math.floor(hplayer.getDamage(p) * 0.1)
+                table.insert({
+                    playerIndex = pi,
+                    value = math.floor(hplayer.getDamage(p) * 0.1)
+                })
             end
         )
         return data

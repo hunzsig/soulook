@@ -1,6 +1,7 @@
 table
 
 > 调用：table.method() 与原有的table完美混合
+> 大部分方法不支持pairs[关联数组]，会引起异步
 
 ---
 
@@ -8,6 +9,7 @@ table
 * **len(table)**
 ```
 获取一个table的正确长度
+（不建议使用，会引起异步)
 ```
 
 * **random(arr)**

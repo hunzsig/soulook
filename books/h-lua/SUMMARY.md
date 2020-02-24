@@ -10,6 +10,7 @@
 
 ## 系统介绍
 
+* [框架指令](description/command.md)
 * [常量规划](description/const.md)
 * [属性系统](description/attr.md)
 * [物品系统](description/item.md)

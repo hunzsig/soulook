@@ -35,6 +35,7 @@ index=Z:\war3\hunzsig-warcraft3\w3x-my-tower\hot.lua
 > 直接require方式加载的话会继续遍历（如果你直接require一个文件，他会继续递归后续的lua）
 > 自动删除 -- 和 --[[]] 格式的注释
 > 自动去除空行
+> 自动识别HLUA_DEBUG
 
 打包完成后，会在与你入口文件同级目录生成一个dist.lua
 > 打包不一定完全准确，你应该去检查一下是否真的成功！
