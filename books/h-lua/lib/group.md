@@ -7,6 +7,7 @@ group
 * **loop(whichGroup, actions, autoDel)**
 ```
 循环group
+!强烈建议使用此方法而不是ForGroup
 ```
 
 * **count(whichGroup)**
@@ -46,7 +47,25 @@ group
 
 * **createByUnit(u, radius, filterFunc)**
 ```
-以某单位为中心radius距离创建单位组
+以某单位为中心radius距离创建单位组,例子
+hgroup.createByUnit(
+    whichUnit,
+    radius,
+    function(filterUnit)
+        --filterFunc需要返回一个bool结果
+        local flag = true
+        if (his.enemy(options.whichUnit, filterUnit)) then
+            flag = false
+        end
+        if (his.death(filterUnit)) then
+            flag = false
+        end
+        if (his.building(filterUnit)) then
+            flag = false
+        end
+        return flag
+    end
+)
 ```
 
 * **createByRect(r, filterFunc)**

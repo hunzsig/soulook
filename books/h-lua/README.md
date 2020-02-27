@@ -2,7 +2,7 @@
  * [最佳实践：我塔非凡](https://github.com/hunzsig-warcraft3/w3x-my-tower)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.02.24
+ * version 2020.02.27
  * QQ 325338043
 
 # 使用优势？
@@ -26,12 +26,11 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
     │   ├── hotKey - 热键
     │   ├── item - 物品
     │   ├── playerColor - 玩家颜色
-    │   ├── unit - 单位
-    │   └── start.lua - 开始准备
+    │   └── unit - 单位
     ├── foundation - 基础文件
     │   ├── foundation - 基础文件
-    │   ├── blizzard_b.lua - 暴雪BJ全局
-    │   ├── blizzard_c.lua - 暴雪C全局
+    │   ├── blizzard_b.lua - 暴雪B全局变量
+    │   ├── blizzard_c.lua - 暴雪C全局变量
     │   ├── blizzard_bj.lua - 暴雪部分BJ函数
     │   ├── blizzard_def.lua - 实际无用，参考用途
     │   ├── color.lua - 颜色
@@ -42,14 +41,14 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
     │   ├── md5.lua - MD5
     │   ├── runtime.lua - 运行时数据集
     │   ├── string.lua - 字符串库
-    │   ├── table.lua - 表库
-    │   └── start.lua - 开始准备
+    │   └── table.lua - 表库
     ├── lib
+    │   ├── skill - 技能包
     │   ├── attrbute.lua - 基础/拓展/伤害特效/自然/单位关联，万能属性系统，自由、强大
     │   ├── award.lua - 奖励模块，用于控制玩家的黄金木头经验
     │   ├── camera.lua - 镜头模块，用于控制玩家镜头
     │   ├── dialog.lua - 对话框模块，用于显示对话框
-    │   ├── dzapi.lua - Dzapi
+    │   ├── dzapi.lua - Dzapi(配合./plugins/dzapi.jass使用)
     │   ├── effect.lua - 特效模块
     │   ├── enemy.lua - 敌人模块，用于设定敌人玩家，自动分配单位
     │   ├── env.lua - 环境模块，可随机为区域生成装饰物及地表纹理
@@ -61,12 +60,11 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
     │   ├── leaderBoard.lua 排行榜模块，用于简易构建排行榜
     │   ├── lightning.lua - 闪电链
     │   ├── mark.lua - 遮罩模块
-    │   ├── message.lua - 消息模块(注意漂浮字模块与h-vjass不同，是一个独立的ttg模块)
+    │   ├── message.lua - 消息模块(注意漂浮字模块与h-vjass不同，是一个独立的textTag模块)
     │   ├── multiBoard.lua - 多面板
     │   ├── player.lua - 玩家
     │   ├── quest.lua - 任务
     │   ├── rect.lua - 区域
-    │   ├── skill.lua - 高级技能
     │   ├── sound.lua - 声音模块
     │   ├── textTag.lua - 漂浮字模块
     │   ├── time.lua - 时间/计时器 * 常用

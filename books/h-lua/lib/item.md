@@ -22,11 +22,9 @@ item
 
 * **vars**
 ```
-TYPE = {
-    COORDINATE = "coordinate",
-    POSITION = "position",
-    UNIT = "unit",
-    LOCATION = "location"
+POSITION_TYPE = {
+    COORDINATE = "coordinate", --坐标
+    UNIT = "unit", --单位持有
 }
 ```
 
@@ -43,6 +41,16 @@ TYPE = {
 * **getName(it)**
 ```
 获取物品名称
+```
+
+* **getPositionType(it)**
+```
+获取物品位置类型(一般不需要使用，框架自处理)
+```
+
+* **setPositionType(it, type)**
+```
+设置物品位置类型(一般不需要使用，框架自处理)
 ```
 
 * **getSlk(itOrId)**
@@ -179,6 +187,22 @@ bean = {
 * **give(origin, target)**
 ```
 使一个单位的所有物品给另一个单位
+```
+
+* **pick(it, targetUnit)**
+```
+操作物品给一个单位
+```
+
+* **pickRect(u, x, y, w, h)**
+```
+一键拾取区域(x,y)长宽(w,h)
+!并不会创建区域
+```
+
+* **pickRound(u, x, y, r)**
+```
+一键拾取圆(x,y)半径(r)
 ```
 
 * **copy(origin, target)**
