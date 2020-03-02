@@ -43,4 +43,15 @@ index=Z:\war3\hunzsig-warcraft3\w3x-my-tower\hot.lua
 
 如果打包确定100%正确，代码完好
 > 将你的 import("main.lua") ("hot.lua", true) 改为 import("main.lua") ("dist.lua", true)
-> 保存！优化！上线！恭喜你！
+
+然后编辑器保存！
+> 保存会自动把地图打包在魔兽客户端\Maps\Test\WorldEditTestMap.w3x
+> 这个文件就是未加密的地图文件（几乎可以上线了！）
+
+然后优化！
+> 对自己地图优化的方法有很多，自行百度吧，这里说一个常用的：
+> 例如：使用Wc3MapMax++1.3.11优化，不勾选任何优化，只去除地图编辑器需要的文件（类似简单加密）
+> (上述的工具在这里有：https://github.com/hunzsig-warcraft3/assets-software)
+> 把优化好的地图文件改个名，例如你的地图是剑圣求生之路：jsqszl.v1.0.0.w3x,就可以上传地图到支持lua引擎的平台了！
+
+恭喜你！
