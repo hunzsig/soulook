@@ -2,7 +2,7 @@
  * [最佳实践：我塔非凡](https://github.com/hunzsig-warcraft3/w3x-my-tower)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.03.01
+ * version 2020.03.08
  * QQ 325338043
 
 # 使用优势？
