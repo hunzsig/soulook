@@ -25,6 +25,11 @@ dzapi
 是否有商城道具
 ```
 
+* **setMallItemCheater(whichPlayer)**
+```
+设置一个玩家为特殊商城人员，可以自动获得所有的商城道具
+```
+
 * **setRoomStat(whichPlayer, key, text)**
 ```
 设置房间数据

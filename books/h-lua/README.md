@@ -2,7 +2,7 @@
  * [最佳实践：我塔非凡](https://github.com/hunzsig-warcraft3/w3x-my-tower)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.03.08
+ * version 2020.03.16
  * QQ 325338043
 
 # 使用优势？
@@ -80,18 +80,17 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
         └── init.jass - 需要在触发编辑器加载的文件，用于初始化及调用lua-exec
 ```
 
-提醒：
-### 本套代码免费提供给了解lua的作者试用，如果不了解lua语言请使用T来制作地图或自行学习，此处不提供教学
+> 提醒：本套代码免费提供给了解lua的作者试用，如果不了解lua语言请使用T来制作地图或自行学习，此处不提供教学
 
-> 以下教程以YDWE为例
-## 前期准备：
-### 打开 YWDE【设置】的lua引擎 
-### 只需要关闭 YWDE的“逆天”触发
-
-## 好了，让我们开始接入：
-### 打开 YDWE 打开地图按F4打开触发编辑器
-### 在最上方第一的位置添加一个【新触发】
-### 选中新建的触发点击菜单【编辑】将他转为自定义文本，替换成你的代码，如下：
+#### 以下教程以demoTD图（我塔非凡）为例
+#### 编辑器以 https://github.com/hunzsig-warcraft3/assets-software 编辑器（WorldEdit_1.27a_1.0.rar）为例
+> 编辑器准备：
+> 打开编辑器【设置】的lua、Dzapi引擎 
+> 关闭编辑器【插件】“逆天”触发
+> 好了，让我们开始接入：
+> 打开编辑器，打开地图按F4打开触发编辑器
+> 在最上方第一的位置添加一个【新触发】
+> 选中新建的触发点击菜单【编辑】将他转为自定义文本，替换成你的代码，如下：
 ```
 <?
 #include "[YOUR PATH]/h-lua/slk/helper.lua"
@@ -102,7 +101,9 @@ import("main.lua") ("hot.lua", true)
 ```
 > （不建议路径存在有中文）
 
-> 上线打包package用 import("main.lua") ("dist.lua", true)
+```
+上线打包package用 import("main.lua") ("dist.lua", true)
+```
 
 > 注意：
 h-lua库开源，不定时更新，可访问 http://hlua.book.hunzsig.org 查看最新文档
