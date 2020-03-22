@@ -1,5 +1,5 @@
  * [github网址](https://github.com/hunzsig-warcraft3/h-lua)
- * [功能测试:DZAPI](https://github.com/hunzsig-warcraft3/w3x-dzapi-test)
+ * [功能测试：DZAPI](https://github.com/hunzsig-warcraft3/w3x-dzapi-test)
  * [最佳实践：我塔非凡](https://github.com/hunzsig-warcraft3/w3x-my-tower)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
