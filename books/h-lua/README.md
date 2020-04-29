@@ -1,5 +1,5 @@
  * [github网址](https://github.com/hunzsig-warcraft3/h-lua)
- * [最佳实践：我塔非凡](https://github.com/hunzsig-warcraft3/w3x-my-tower)
+ * [开源地图：我塔非凡](https://github.com/hunzsig-warcraft3/w3x-my-tower)
  * 功能测试：
      [DZAPI](https://github.com/hunzsig-warcraft3/w3x-test-dzapi)、
      [崩溃压力](https://github.com/hunzsig-warcraft3/w3x-test-breakdown)
