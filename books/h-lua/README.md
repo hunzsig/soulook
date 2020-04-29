@@ -5,10 +5,18 @@
      [崩溃压力](https://github.com/hunzsig-warcraft3/w3x-test-breakdown)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.04.14
+ * version 2020.04.29
  * QQ 325338043
+ 
+## 最近致命性动荡修改
+> BJ方法不再内置，如果你使用了BJ方法，可自行引用 /h-lua/foundation/blizzard_bj.lua
+> message模块已被删除，在屏幕打印的echo方法现在是直接全局使用即可
+> mark模块已被删除，重构为texture模块，管理与贴图有关的一些方法
+> time修复了致命bug，全面框架自实现化，不再向外提供timer对象
+> env重构，大部分功能已经可以试用
+> hero重构，英雄选择功能已经可以试用
 
-# 使用优势？
+### 使用优势？
 h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依赖任何游戏平台（如JAPI、DzAPI）
 但并不禁止你使用(有集成DzAPI)。
 包含多样丰富的属性系统，内置多达几十种以上的自定义事件,可以轻松做出平时难以甚至不能做出的技能效果。
@@ -18,8 +26,7 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
 ### 敬告 warning
 可以发现h-lua并没有发行Releases，尚在master-dev，有的功能尚未测试，或者尚未完成
 但h-lua的初衷是帮助你更好地学习作图，所以你依然可以看框架代码学会不同的作图方法
-暂时未完善的库：env（地形）、hero（选择英雄部分）、item（合成拆分）
-可能有问题的库：event（玩家、区域事件）
+暂时未完善的库：item（合成拆分）
 
 #### 框架结构如下：
 ```
@@ -40,10 +47,11 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
     │   ├── foundation - 基础文件
     │   ├── blizzard_b.lua - 暴雪B全局变量
     │   ├── blizzard_c.lua - 暴雪C全局变量
-    │   ├── blizzard_bj.lua - 暴雪部分BJ函数
+    │   ├── blizzard_bj.lua - 暴雪部分BJ函数，实际无用，非要用bj就自行拓展编写载入
     │   ├── blizzard_def.lua - 实际无用，参考用途
     │   ├── color.lua - 颜色
     │   ├── debug.lua - 调试
+    │   ├── echo.lua - 游戏荧幕打印
     │   ├── f9.lua - 框架任务
     │   ├── json.lua - json库
     │   ├── math.lua - 计算库
@@ -68,14 +76,13 @@ h-lua拥有优秀的demo，在开源的同时引导您学习的更多，不依�
     │   ├── item.lua - 物品模块，与属性系统无缝结合，合成/分拆等功能
     │   ├── leaderBoard.lua 排行榜模块，用于简易构建排行榜
     │   ├── lightning.lua - 闪电链
-    │   ├── mark.lua - 遮罩模块
-    │   ├── message.lua - 消息模块(注意漂浮字模块与h-vjass不同，是一个独立的textTag模块)
     │   ├── multiBoard.lua - 多面板
     │   ├── player.lua - 玩家
     │   ├── quest.lua - 任务
     │   ├── rect.lua - 区域
     │   ├── sound.lua - 声音模块
-    │   ├── textTag.lua - 漂浮字模块
+    │   ├── textTag.lua - 漂浮字
+    │   ├── texture.lua - 遮罩、贴图
     │   ├── time.lua - 时间/计时器 * 常用
     │   ├── unit.lua - 单位
     │   └── weather.lua - 天气
