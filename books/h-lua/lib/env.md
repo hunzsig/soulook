@@ -4,14 +4,21 @@ env
 
 ---
 
-* **build(whichRect, typeStr, excludeX, excludeY, isDestroyRect, ground, doodad, units)**
+* **build(whichRect, typeStr, isInvulnerable, isDestroyRect, ground, doodad, units)**
 ```
 构建环境
+whichRect userdata
+typeStr string
+isInvulnerable boolean 可破坏物是否无敌
+isDestroyRect boolean
+ground number
+doodad userdata
+units table
 ```
 
-* **random(whichRect, typeStr, excludeX, excludeY, isDestroyRect)**
+* **random(whichRect, typeStr, isInvulnerable, isDestroyRect)**
 ```
-在某区域随机生成某种环境的装饰物
+随机构建区域装饰
 typeStr:
     summer 夏季
     autumn 秋季
@@ -22,6 +29,8 @@ typeStr:
     ruins 遗迹
     fire 火焰熔岩
     underground 地下城
+    sea 海洋
+    river 河流
 ```
 
 

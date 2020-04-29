@@ -14,13 +14,7 @@ event
 设置某单位最后的伤害者
 ```
 
-* **triggerEvent(bean)**
-```
-触发事件（通用）
-! 慎用，建议看源码来用
-```
-
-* **[重点]如何获取回调的数据**
+* **如何获取回调的数据**
 ```
 以最常用的攻击事件为例子：
 hevent.onAttack(whichUnit,function(evtData)
@@ -29,6 +23,7 @@ end)
 值得注意的是：
 1、技能的ID已经自动转为string了，无需再此转换
 2、所有的location，也就是点，自动转为(x,y,z)三个参数返回
+3、结合emmyLua插件可以快速敲打回调数据代码
 ```
 
 * **onAttackDetect(whichUnit, action)**
@@ -43,14 +38,6 @@ evtData.targetUnit 获取被注意/目标单位
 当获取攻击目标
 evtData.triggerUnit 获取触发单位
 evtData.targetUnit 获取被获取/目标单位
-```
-
-* **onAttackReady(whichUnit, action)**
-```
-当准备攻击
-evtData.triggerUnit 获取攻击单位
-evtData.targetUnit 获取被攻击单位
-evtData.attacker 获取攻击单位
 ```
 
 * **onBeAttackReady(whichUnit, action)**
@@ -100,7 +87,7 @@ evtData.targetY 获取施放目标点Y
 evtData.targetZ 获取施放目标点Z
 ```
 
-* **onSkillStart(whichUnit, action)**
+* **onSkillCast(whichUnit, action)**
 ```
 当开始施放技能
 evtData.triggerUnit 获取施放单位
@@ -118,18 +105,18 @@ evtData.triggerUnit 获取施放单位
 evtData.triggerSkill 获取施放技能ID
 ```
 
-* **onSkillHappen(whichUnit, action)**
+* **onSkillEffect(whichUnit, action)**
 ```
 当发动技能效果
 evtData.triggerUnit 获取施放单位
 evtData.targetUnit 获取目标单位(只对对目标施放有效)
-evtData.triggerSkill 获取施放技能ID
+evtData.triggerSkill 施放技能ID字符串
 evtData.targetX 获取施放目标点X
 evtData.targetY 获取施放目标点Y
 evtData.targetZ 获取施放目标点Z
 ```
 
-* **onSkillOver(whichUnit, action)**
+* **onSkillFinish(whichUnit, action)**
 ```
 当施放技能结束
 evtData.triggerUnit 获取施放单位
@@ -147,7 +134,16 @@ evtData.triggerItem 获取触发物品
 ```
 当出售物品(商店卖给玩家)
 evtData.triggerUnit 获取触发单位
-evtData.triggerItem 获取触发物品
+evtData.soldItem 售卖物品
+evtData.buyingUnit 购买单位
+```
+
+* **onUnitSell(whichUnit, action)**
+```
+当出售单位(商店卖给玩家)
+evtData.triggerUnit 获取触发单位
+evtData.soldUnit 被售卖单位
+evtData.buyingUnit 购买单位
 ```
 
 * **onItemDrop(whichUnit, action)**
@@ -492,7 +488,7 @@ evtData.sourceUnit 获取来源单位
 当吸血时
 evtData.triggerUnit 获取触发单位
 evtData.targetUnit 获取目标单位
-evtData.damage 获取吸血值
+evtData.value 获取吸血值
 evtData.percent 获取吸血百分比
 ```
 
@@ -501,7 +497,7 @@ evtData.percent 获取吸血百分比
 当被吸血时
 evtData.triggerUnit 获取触发单位
 evtData.sourceUnit 获取来源单位
-evtData.damage 获取吸血值
+evtData.value 获取吸血值
 evtData.percent 获取吸血百分比
 ```
 
@@ -510,7 +506,7 @@ evtData.percent 获取吸血百分比
 当技能吸血时
 evtData.triggerUnit 获取触发单位
 evtData.targetUnit 获取目标单位
-evtData.damage 获取吸血值
+evtData.value 获取吸血值
 evtData.percent 获取吸血百分比
 ```
 
@@ -519,7 +515,7 @@ evtData.percent 获取吸血百分比
 当被技能吸血时
 evtData.triggerUnit 获取触发单位
 evtData.sourceUnit 获取来源单位
-evtData.damage 获取吸血值
+evtData.value 获取吸血值
 evtData.percent 获取吸血百分比
 ```
 
@@ -558,12 +554,6 @@ evtData.triggerUnit 获取触发单位
 当提升升等级时
 evtData.triggerUnit 获取触发单位
 evtData.value 获取提升了多少级
-```
-
-* **onSummon(whichUnit, action)**
-```
-当被召唤时
-evtData.triggerUnit 获取被召唤单位
 ```
 
 * **onEnterUnitRange(whichUnit, range, action)**

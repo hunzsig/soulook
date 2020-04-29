@@ -24,23 +24,6 @@ hero
 设置英雄当前的等级
 ```
 
-* **setBuildParams(x, y, distance, per_row, allow_qty)**
-```
-设定酒馆参数
-x 位置的坐标X
-y 位置的坐标Y
-distance 位置的间隔距离
-per_row 位置上横列每行最大数量
-allow_qty 酒馆内允许多少个英雄商品
-```
-
-* **setHeroBornParams(x, y)**
-```
-设定英雄出生点参数
-x 位置的坐标X
-y 位置的坐标Y
-```
-
 * **setPlayerAllowQty(whichPlayer, max)**
 ```
 设置玩家最大单位数量,支持1 - 7
@@ -49,23 +32,6 @@ y 位置的坐标Y
 * **getPlayerAllowQty(whichPlayer)**
 ```
 获取玩家最大单位数量
-```
-
-* **addPlayerUnit(whichPlayer, u, type)**
-```
-添加一个单位给玩家
-```
-
-* **removePlayerUnit(whichPlayer, u, type)**
-```
-删除一个英雄单位对玩家
-```
-
-* **setIsHero(u, bool)**
-```
-设置一个单位是否使用英雄判定(请勿重复设置)
- ！请不要乱设置[一般单位]为[英雄]，以致于力量敏捷智力等不属于一般单位的属性引起崩溃报错
- ！设定后 his.hero 方法会认为单位为英雄，同时属性系统才会认定它为英雄，从而生效
 ```
 
 * **getHeroType(u)**
@@ -78,16 +44,43 @@ y 位置的坐标Y
 获取英雄的类型名称（力量/敏捷/智力）
 ```
 
-* **buildClick(during, clickQty)**
+* **setBornXY(x, y)**
 ```
-构建选择单位给玩家（clickQty 击）
-during 选择时间
-自动获取 hslk_global.heroes ，请先设置这个table
+设定英雄出生点参数
+x 位置的坐标X
+y 位置的坐标Y
 ```
 
-* **buildTavern(during)**
+* **setIsHero(u, bool)**
 ```
-构建选择单位给玩家（商店物品）
-during 选择时间
-自动获取 hslk_global.heroesItems ，请先设置这个table
+设置一个单位是否使用英雄判定(请勿重复设置)
+ ！请不要乱设置[一般单位]为[英雄]，以致于力量敏捷智力等不属于一般单位的属性引起崩溃报错
+ ！设定后 his.hero 方法会认为单位为英雄，同时属性系统才会认定它为英雄，从而生效
+```
+
+* **buildSelector(options)**
+```
+开始构建英雄选择
+options = {
+    heroes = {"H001","H002"}, -- 可以选择的单位ID
+    during = 60, -- 选择持续时间，最少30秒，默认60秒，超过这段时间未选择的玩家会被剔除出游戏
+    type = string, "tavern" | "click"
+    buildX = 0, -- 构建点X
+    buildY = 0, -- 构建点Y
+    buildDistance = 256, -- 构建距离，例如两个酒馆间，两个单位间
+    buildRowQty = 4, -- 每行构建的最大数目，例如一行最多4个酒馆
+    allowTavernQty = 10, -- 酒馆模式下，一个酒馆最多拥有几种单位
+}
+如：
+    hhero.setBornXY(1004, 142)
+    hhero.buildSelector({
+        heroes = { "Hpal", "Hamg" }, -- 可以选择的单位ID
+        during = 60,
+        type = "tavern",
+        buildX = -517, -- 构建点X
+        buildY = 314, -- 构建点Y
+        buildDistance = 256,
+        buildRowQty = 2,
+        buildTavernQty = 10, -- 酒馆模式下，一个酒馆最多拥有几种单位
+    })
 ```
