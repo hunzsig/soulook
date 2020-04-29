@@ -4,7 +4,7 @@
 * [README](README.md)
 * [为什么会有h-lua?](description/introduction.md)
 * [更新日志](changeLog.md)
-* [使用前注意事项](description/alert.md)
+* [框架注意事项](description/alert.md)
 * [常见崩溃原因](description/break.md)
 * [上线官方平台须知](description/dist.md)
 
@@ -14,11 +14,9 @@
 * [常量规划](description/const.md)
 * [属性系统](description/attr.md)
 * [物品系统](description/item.md)
-* [单位XY坐标教程](description/xy.md)
-* [加载BGM教程](description/roomMusic.md)
+* [黑科技教程](description/black.md)
 
 ## 基础库
-* [foundation.lua 基础库介绍](foundation/foundation.md)
 * [color.lua 颜色](foundation/color.md)
 * [debug.lua json库](foundation/debug.md)
 * [json.lua json库](foundation/json.md)

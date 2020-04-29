@@ -1,11 +1,10 @@
-### 更新日志 <a href="https://github.com/hunzsig-warcraft3/h-lua" target="_blank">#Git</a>
-
-> 注意这里只列出部分较重要的更新
+### 重要更新日志 <a href="https://github.com/hunzsig-warcraft3/h-lua" target="_blank">#Git</a>
 
 #### 2020/04/29
     致命 | 现在time模块不再支持原生计时器对象的获取时间了，全部改为框架自实现
     致命 | 修复timer索引有误的bug（可能导致计时器无法删除）
     致命 | 修复胜利失败不会自动结束游戏的问题
+    致命 | 修复物品事件无法注册的bug
     优化 | 继续完善英雄选择
 #### 2020/04/26
     优化 | 调整skill的damage，现在伤害动作可以没有伤害来源
