@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Layout, Row, Col, Menu, Button, Icon } from 'antd';
-import { withRouter } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Layout, Row, Col, Menu, Button, Icon} from 'antd';
+import {withRouter} from 'react-router-dom';
 import Cookie from '../../Cookie';
 import hRouter from '../../hRouter';
 import Loadable from 'react-loadable';
@@ -9,7 +9,7 @@ import HRouterLoading from './../../hRouterLoading';
 import './Layout.scss';
 import './Index.scss';
 
-const { Content } = Layout;
+const {Content} = Layout;
 const pageCache = {};
 
 let Information = require('./information.example.json');
@@ -110,10 +110,11 @@ class Index extends Component {
           open.push(this.routerFlat[temp].jumpPath);
         }
       });
-      if (paths.length === 2 && paths[1] === '') {
-        open.push(this.routerAll[0].jumpPath);
+      if (paths[1] > 1 && open.length > 1) {
+        open.shift()
       }
     }
+    console.log(open);
     return open;
   };
 
@@ -222,7 +223,7 @@ class Index extends Component {
               {this.renderSub(this.children)}
             </Menu>
           </Col>
-          <Col style={{ flex: 1 }}>
+          <Col style={{flex: 1}}>
             <div className="conContainer">
               <Button.Group className="menu-btns">
                 <Button
@@ -266,11 +267,11 @@ class Index extends Component {
                     ? React.createElement(Loadable({
                       loader: () => import('./IndexLight'),
                       loading: HRouterLoading
-                    }), { book: book })
+                    }), {book: book})
                     : React.createElement(Loadable({
                       loader: () => import('./IndexDark'),
                       loading: HRouterLoading
-                    }), { book: book })
+                    }), {book: book})
                 }
                 <div className="page-trans">
                   <Icon
@@ -291,7 +292,7 @@ class Index extends Component {
                 </div>
               </Content>
               <div className="footer">
-                <div className="line" />
+                <div className="line"/>
                 <Row className="copyright">
                   <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
                     <span>{Information.qq}</span>
@@ -301,10 +302,11 @@ class Index extends Component {
                   </Col>
                   <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
                     <a href={Information.site.url} target="_blank" className={this.state.theme}><Icon
-                      type="github" />&emsp;{Information.site.name}</a>
+                      type="github"/>&emsp;{Information.site.name}</a>
                   </Col>
                   <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
-                    <a href={Information.beian.url} target="_blank" className={this.state.theme}>ICP证：{Information.beian.name}</a>
+                    <a href={Information.beian.url} target="_blank"
+                       className={this.state.theme}>ICP证：{Information.beian.name}</a>
                   </Col>
                 </Row>
               </div>
