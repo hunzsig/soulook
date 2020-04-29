@@ -111,7 +111,9 @@ class Index extends Component {
           open.push(this.routerFlat[temp].jumpPath);
         }
       });
-      if (Number.parseInt(paths[2], 10) > 1 && open.length > 1) {
+      if (paths[1] === '') {
+        open.push(this.routerAll[0].jumpPath);
+      } else if (Number.parseInt(paths[2], 10) > 1 && open.length > 1) {
         open.shift()
       }
     }
