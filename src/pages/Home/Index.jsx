@@ -8,6 +8,7 @@ import HRouterLoading from './../../hRouterLoading';
 
 import './Layout.scss';
 import './Index.scss';
+import {number} from "prop-types";
 
 const {Content} = Layout;
 const pageCache = {};
@@ -110,11 +111,10 @@ class Index extends Component {
           open.push(this.routerFlat[temp].jumpPath);
         }
       });
-      if (paths[1] > 1 && open.length > 1) {
+      if (Number.parseInt(paths[2], 10) > 1 && open.length > 1) {
         open.shift()
       }
     }
-    console.log(open);
     return open;
   };
 
