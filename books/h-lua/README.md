@@ -5,7 +5,7 @@
      [崩溃压力](https://github.com/hunzsig-warcraft3/w3x-test-breakdown)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.04.30
+ * version 2020.05.06
  * QQ 325338043
  
 ## 最近致命性动荡修改

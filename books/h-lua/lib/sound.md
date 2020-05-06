@@ -24,9 +24,15 @@ sound
 绑定坐标音效
 ```
 
-* **sound2Loc(s, loc)**
+* **sound2Rect(s, whichRect, during)**
 ```
-绑定点音效
+绑定区域音效
+```
+
+* **bgmStop(whichPlayer)**
+```
+停止对某玩家或所有玩家播放背景音乐
+hsound.bgmStop(nil) 设nil则对所有玩家生效
 ```
 
 * **bgm(musicFileName, whichPlayer)**
@@ -36,8 +42,3 @@ sound
 hsound.bgm(musicFileName, nil) 设nil则对所有玩家生效
 ```
 
-* **bgmStop(whichPlayer)**
-```
-停止对某玩家或所有玩家播放背景音乐
-hsound.bgmStop(nil) 设nil则对所有玩家生效
-```

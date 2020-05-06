@@ -92,6 +92,22 @@ options = {
 }
 ```
 
+* **damageStep(options)**
+```
+范围持续伤害
+options = {
+    whichUnit = [unit], --受伤单位（必须有）
+    frequency = 0, --伤害频率（必须有）
+    times = 0, --伤害次数（必须有）
+    effect = "", --特效（可选）
+    damage = 0, --单次伤害（大于0）
+    sourceUnit = [unit], --伤害来源单位（可选）
+    damageKind = CONST_DAMAGE_KIND.skill --伤害的种类（可选）
+    damageType = {CONST_DAMAGE_TYPE.real} --伤害的类型,注意是table（可选）
+    extraInfluence = [function],
+}
+```
+
 * **damageRange(options)**
 ```
 范围持续伤害
