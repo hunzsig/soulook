@@ -1,5 +1,12 @@
 ### 重要更新日志 <a href="https://github.com/hunzsig-warcraft3/h-lua" target="_blank">#Git</a>
 
+#### 2020/05/09
+    致命 | 更多地框架内实现，group不再使用原生方法进行选取单位，可以选取到hunit.create的所有单位(如果原来就使用框架内create方法，几乎对现有功能无影响)
+#### 2020/05/08
+    致命 | event优化pool的处理，优化掉了框架拓展trigger的引用
+    优化 | 初始化合并,优化dzapi关闭时的提示，优化掉了框架拓展trigger的引用
+#### 2020/05/07
+    优化 | 新增item模块瞬逝物fleeting方法
 #### 2020/05/06
     功能 | 新增多频对单位伤害技能 hskill.damageStep
     优化 | 修改bgm的播放逻辑流程(改善了bgm的播放顺序效率)

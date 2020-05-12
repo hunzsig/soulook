@@ -5,10 +5,11 @@
      [崩溃压力](https://github.com/hunzsig-warcraft3/w3x-test-breakdown)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.05.06
+ * version 2020.05.12
  * QQ 325338043
  
 ## 最近致命性动荡修改
+> group模块现在是框架自实现，与原生单位组几乎无关
 > BJ方法不再内置，如果你使用了BJ方法，可自行引用 /h-lua/foundation/blizzard_bj.lua
 > message模块已被删除，在屏幕打印的echo方法现在是直接全局使用即可
 > mark模块已被删除，重构为texture模块，管理与贴图有关的一些方法
