@@ -1,5 +1,8 @@
 ### 重要更新日志 <a href="https://github.com/hunzsig-warcraft3/h-lua" target="_blank">#Git</a>
 
+#### 2020/05/14
+    优化 | F9提示优化，并增加all参数，一key全配置
+    优化 | table.merge方法支持动态参数(多table简单合并)
 #### 2020/05/09
     致命 | 更多地框架内实现，group不再使用原生方法进行选取单位，可以选取到hunit.create的所有单位(如果原来就使用框架内create方法，几乎对现有功能无影响)
 #### 2020/05/08

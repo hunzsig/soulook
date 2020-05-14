@@ -5,7 +5,7 @@
      [崩溃压力](https://github.com/hunzsig-warcraft3/w3x-test-breakdown)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.05.12
+ * version 2020.05.14
  * QQ 325338043
  
 ## 最近致命性动荡修改
@@ -18,9 +18,9 @@
 > hero重构，英雄选择功能已经可以试用
 
 ### 敬告 warning
-可以发现h-lua并没有发行Releases，尚在master-dev，有的功能尚未测试，或者尚未完成
-但h-lua的初衷是在开源的同时引导帮助你更好地学习作图，，不依赖任何游戏平台（如JAPI、DzAPI）
-所以你依然可以看框架代码学会不同的作图方法
+可以发现h-lua并没有发行Releases，尚在master-dev，大部分功能已制作
+但h-lua的初衷是在开源的同时引导帮助你更好地学习作图，不依赖任何API（如JAPI、DzAPI）
+所以你依然可以看框架代码学会不同的作图方法，拓展思路，而不是纯依赖逆天、JAPI等第三方
 暂时未完善的库：item（合成拆分）
 
 #### 框架结构如下：

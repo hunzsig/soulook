@@ -54,6 +54,11 @@ color
 黄色
 ```
 
+* **orange(str)**
+```
+橙色
+```
+
 * **skyLight(str)**
 ```
 明亮天空色
