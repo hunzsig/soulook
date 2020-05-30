@@ -1,21 +1,26 @@
  * [github网址](https://github.com/hunzsig-warcraft3/h-lua)
+ * [开源地图：Hello World！](https://github.com/hunzsig-warcraft3/w3x-h-lua-helloworld)
  * [开源地图：我塔非凡](https://github.com/hunzsig-warcraft3/w3x-my-tower)
  * 功能测试：
      [DZAPI](https://github.com/hunzsig-warcraft3/w3x-test-dzapi)、
      [崩溃压力](https://github.com/hunzsig-warcraft3/w3x-test-breakdown)
  * [极速上手文档](https://docs.qq.com/doc/DTUZZZWZzYVpyeW1o)
  * author hunzsig
- * version 2020.05.14
+ * version 2020.05.30
  * QQ 325338043
  
 ## 最近致命性动荡修改
-> group模块现在是框架自实现，与原生单位组几乎无关
+> slkhelper 大革新，更加爽快，做图更快
+> group模块现在是框架自实现，与原生单位组无关
 > BJ方法不再内置，如果你使用了BJ方法，可自行引用 /h-lua/foundation/blizzard_bj.lua
 > message模块已被删除，在屏幕打印的echo方法现在是直接全局使用即可
 > mark模块已被删除，重构为texture模块，管理与贴图有关的一些方法
 > time修复了致命bug，全面框架自实现化，不再向外提供timer对象
 > env重构，大部分功能已经可以试用
 > hero重构，英雄选择功能已经可以试用
+
+## 编辑器强烈建议
+https://github.com/hunzsig-warcraft3/assets-software （WorldEdit_1.27a_1.0.rar）
 
 ### 敬告 warning
 可以发现h-lua并没有发行Releases，尚在master-dev，大部分功能已制作
@@ -94,10 +99,13 @@
 > 提醒：本套代码免费提供给了解lua的作者试用，如果不了解lua语言请使用T来制作地图或自行学习，此处不提供教学
 
 #### 以下教程以demoTD图（我塔非凡）为例
-#### 编辑器以 https://github.com/hunzsig-warcraft3/assets-software 编辑器（WorldEdit_1.27a_1.0.rar）为例
+
 > 编辑器准备：
 > 打开编辑器【设置】的lua、Dzapi引擎 
-> 关闭编辑器【插件】“逆天”触发
+> 建议关闭编辑器【插件】“逆天”触发，毕竟不再需要它
+>
+> 如果不知道编辑器怎么设置，可以看置顶的《h-lua极速上手》的 Q&A
+>
 > 好了，让我们开始接入：
 > 打开编辑器，打开地图按F4打开触发编辑器
 > 在最上方第一的位置添加一个【新触发】

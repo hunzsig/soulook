@@ -1,5 +1,18 @@
 ### 重要更新日志 <a href="https://github.com/hunzsig-warcraft3/h-lua" target="_blank">#Git</a>
 
+#### 2020/05/30
+    致命 | 修复一个runtime空值bug
+#### 2020/05/26
+    优化 | print_mb现在和print一样支持多个参数
+#### 2020/05/25
+    优化 | 单位的初始化，英雄的初始化以及判断的自动化
+#### 2020/05/19
+    功能 | hero模块构建酒馆内实现增强
+#### 2020/05/18
+    优化 | 重做了dzapi服务器清理server.clear
+#### 2020/05/17
+    致命 | slkhelper增加内置方法与hRuntime结合构建物编对象
+    优化 | 修改了math.numberFormat的单位
 #### 2020/05/14
     优化 | F9提示优化，并增加all参数，一key全配置
     优化 | table.merge方法支持动态参数(多table简单合并)
