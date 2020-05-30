@@ -1,5 +1,14 @@
 import React, {Component} from 'react';
-import {Layout, Row, Col, Menu, Button, Icon} from 'antd';
+import {Layout, Row, Col, Menu, Button} from 'antd';
+import {
+  FontSizeOutlined,
+  LeftOutlined,
+  RightOutlined,
+  GithubOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  BulbOutlined,
+} from '@ant-design/icons';
 import {withRouter} from 'react-router-dom';
 import Cookie from '../../Cookie';
 import hRouter from '../../hRouter';
@@ -8,7 +17,6 @@ import HRouterLoading from './../../hRouterLoading';
 
 import './Layout.scss';
 import './Index.scss';
-import {number} from "prop-types";
 
 const {Content} = Layout;
 const pageCache = {};
@@ -231,7 +239,7 @@ class Index extends Component {
                 <Button
                   block={this.state.screen <= 900}
                   type={this.state.collapsed === false ? "primary" : 'default'}
-                  icon={this.state.collapsed === false ? "menu-fold" : 'menu-unfold'}
+                  icon={this.state.collapsed === false ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
                   onClick={() => {
                     Cookie.set('layout-collapsed', this.state.collapsed !== true);
                     this.state.collapsed = this.state.collapsed !== true;
@@ -246,7 +254,7 @@ class Index extends Component {
                 />
                 <Button
                   type={this.state.theme === 'light' ? "primary" : 'default'}
-                  icon="bulb"
+                  icon={<BulbOutlined/>}
                   onClick={() => {
                     Cookie.set('layout-theme', this.state.theme === 'light' ? 'dark' : 'light');
                     location = location;
@@ -254,7 +262,7 @@ class Index extends Component {
                 />
                 <Button
                   type={this.state.fontSize === 'big' ? "primary" : 'default'}
-                  icon="font-size"
+                  icon={<FontSizeOutlined/>}
                   onClick={() => {
                     Cookie.set('layout-font-size', this.state.fontSize === 'small' ? 'big' : 'small');
                     this.setState({
@@ -276,15 +284,13 @@ class Index extends Component {
                     }), {book: book})
                 }
                 <div className="page-trans">
-                  <Icon
-                    type="left"
+                  <LeftOutlined
                     className={this.state.leftPage === null ? 'disabled' : 'enabled'}
                     onClick={() => {
                       this.toPage(this.state.leftPage);
                     }}
                   />
-                  <Icon
-                    type="right"
+                  <RightOutlined
                     className={this.state.rightPage === null ? 'disabled' : 'enabled'}
                     disabled={this.state.rightPage === null}
                     onClick={() => {
@@ -303,8 +309,9 @@ class Index extends Component {
                     <span>© 2015-{(new Date().getFullYear())} {Information.copyright} 版权所有</span>
                   </Col>
                   <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
-                    <a href={Information.site.url} target="_blank" className={this.state.theme}><Icon
-                      type="github"/>&emsp;{Information.site.name}</a>
+                    <a href={Information.site.url} target="_blank" className={this.state.theme}>
+                      <GithubOutlined/>&emsp;{Information.site.name}
+                    </a>
                   </Col>
                   <Col xxs={24} xs={24} s={6} m={6} l={6} xl={6}>
                     <a href={Information.beian.url} target="_blank"

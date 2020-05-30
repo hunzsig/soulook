@@ -32,6 +32,7 @@
     "include": []
   },
   "dependencies": {
+    "@ant-design/icons": "latest",
     "antd": "latest",
     "classnames": "^2.2.5",
     "enquire-js": "^0.1.2",
@@ -51,17 +52,17 @@
     "babel-eslint": "^8.0.3",
     "babel-plugin-import": "^1.7.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "hunzsig-javascript-cli-v12": "latest",
+    "hunzsig-javascript-cli-v14": "latest",
     "react": "16.10.2",
     "react-dom": "16.10.2"
   },
   "homepage": "https://www.hunzsig.org",
   "name": "soulook",
   "scripts": {
-    "app": "cliv12 app",
-    "build": "cliv12 build",
+    "app": "cliv14 app",
+    "build": "cliv14 build",
     "lint": "eslint . --ext '.js,.jsx' --fix",
-    "start": "cliv12 dev -p 10001"
+    "start": "cliv14 dev -p 10001"
   },
   "title": "魂书 - soulook - ",
   "version": "0.0.1"
