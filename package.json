@@ -62,7 +62,7 @@
     "app": "cliv14 app",
     "build": "cliv14 build",
     "lint": "eslint . --ext '.js,.jsx' --fix",
-    "start": "cliv14 dev -p 10001"
+    "start": "cliv14 dev -p 10002"
   },
   "title": "魂书 - soulook - ",
   "version": "0.0.1"

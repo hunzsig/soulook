@@ -1,20 +1,20 @@
 @charset "UTF-8";
 
-$color-shine: #457dfc;
-$color-main: #699ffc;
-$color-sub: #f0f2f5;
-$color-blockquote: #f0f2f5;
-$color-href: #457dfc;
-$color-h-href: #ffee6a;
-$color-hr: #e8e8e8;
-$color-p: #dddddd;
-$color-p-font: #272727;
-$color-li: #444444;
-$color-copyright: #ff191a;
+@color-shine: #457dfc;
+@color-main: #699ffc;
+@color-sub: #f0f2f5;
+@color-blockquote: #f0f2f5;
+@color-href: #457dfc;
+@color-h-href: #ffee6a;
+@color-hr: #e8e8e8;
+@color-p: #dddddd;
+@color-p-font: #272727;
+@color-li: #444444;
+@color-copyright: #ff191a;
 
 .copyright {
   a {
-    color: $color-copyright;
+    color: @color-copyright;
   }
 }
 
@@ -24,17 +24,17 @@ $color-copyright: #ff191a;
   }
 
   a {
-    color: $color-href !important;
+    color: @color-href !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
     padding-left: 5%;
-    background: $color-main;
-    color: $color-sub !important;
+    background: @color-main;
+    color: @color-sub !important;
     border-radius: 3px;
 
     a {
-      color: $color-h-href !important;
+      color: @color-h-href !important;
       font-style: oblique;
       text-decoration: underline;
     }
@@ -76,13 +76,13 @@ $color-copyright: #ff191a;
 
   blockquote > p {
     padding: 8px 5%;
-    background: $color-blockquote;
+    background: @color-blockquote;
     font-style: oblique;
   }
 
   p {
     padding: 0;
-    color: $color-p-font;
+    color: @color-p-font;
   }
 
   code {
@@ -99,7 +99,7 @@ $color-copyright: #ff191a;
     height: 1px;
     margin: 18px 0;
     border: 0;
-    background: $color-hr;
+    background: @color-hr;
   }
 
   ul {
@@ -113,13 +113,13 @@ $color-copyright: #ff191a;
       -webkit-transition: .12s;
       transition: .12s;
       cursor: default;
-      color: $color-li;
+      color: @color-li;
     }
 
     li::before {
       position: absolute;
       content: '\2022';
-      color: $color-main;
+      color: @color-main;
       left: 0;
       text-align: center;
       font-size: 2em;
@@ -130,7 +130,7 @@ $color-copyright: #ff191a;
     }
 
     li:hover {
-      color: $color-shine;
+      color: @color-shine;
     }
 
     li:hover::before {

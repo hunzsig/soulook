@@ -1,20 +1,20 @@
 @charset "UTF-8";
 
-$color-shine: #ffffff;
-$color-main: #f0f2f5;
-$color-sub: #272727;
-$color-blockquote: #3d3d3d;
-$color-href: #ffe045;
-$color-h-href: #ff191a;
-$color-hr: #555555;
-$color-p: #dddddd;
-$color-p-font: #dcdee1;
-$color-li: #f0f2f5;
-$color-copyright: #ffe045;
+@color-shine: #ffffff;
+@color-main: #f0f2f5;
+@color-sub: #272727;
+@color-blockquote: #3d3d3d;
+@color-href: #ffe045;
+@color-h-href: #ff191a;
+@color-hr: #555555;
+@color-p: #dddddd;
+@color-p-font: #dcdee1;
+@color-li: #f0f2f5;
+@color-copyright: #ffe045;
 
 .copyright {
   a {
-    color: $color-copyright;
+    color: @color-copyright;
   }
 }
 
@@ -24,17 +24,17 @@ $color-copyright: #ffe045;
   }
 
   a {
-    color: $color-href !important;
+    color: @color-href !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
     padding-left: 5%;
-    background: $color-main;
-    color: $color-sub !important;
+    background: @color-main;
+    color: @color-sub !important;
     border-radius: 3px;
 
     a {
-      color: $color-h-href !important;
+      color: @color-h-href !important;
     }
   }
 
@@ -74,13 +74,13 @@ $color-copyright: #ffe045;
 
   blockquote > p {
     padding: 8px 5%;
-    background: $color-blockquote;
+    background: @color-blockquote;
     font-style: oblique;
   }
 
   p {
     padding: 0;
-    color: $color-p-font;
+    color: @color-p-font;
   }
 
   code {
@@ -96,7 +96,7 @@ $color-copyright: #ffe045;
     height: 1px;
     margin: 18px 0;
     border: 0;
-    background: $color-hr;
+    background: @color-hr
   }
 
   ul {
@@ -110,13 +110,13 @@ $color-copyright: #ffe045;
       -webkit-transition: .12s;
       transition: .12s;
       cursor: default;
-      color: $color-li;
+      color: @color-li;
     }
 
     li::before {
       position: absolute;
       content: '\2022';
-      color: $color-main;
+      color: @color-main;
       left: 0;
       text-align: center;
       font-size: 2em;
@@ -127,7 +127,7 @@ $color-copyright: #ffe045;
     }
 
     li:hover {
-      color: $color-shine;
+      color: @color-shine;
     }
 
     li:hover::before {
