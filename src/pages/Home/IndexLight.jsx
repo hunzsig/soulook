@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/vs.css';
-import './StyleLight.scss';
+import './StyleLight.less';
 
 class IndexLight extends Component {
   constructor(props) {

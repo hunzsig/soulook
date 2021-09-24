@@ -15,8 +15,8 @@ import hRouter from '../../hRouter';
 import Loadable from 'react-loadable';
 import HRouterLoading from './../../hRouterLoading';
 
-import './Layout.scss';
-import './Index.scss';
+import './Layout.less';
+import './Index.less';
 
 const {Content} = Layout;
 const pageCache = {};
